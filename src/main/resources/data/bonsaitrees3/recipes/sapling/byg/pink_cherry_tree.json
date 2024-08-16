@@ -30,7 +30,7 @@
       "rolls": 2,
       "chance": 0.2,
       "result": {
-        "item": "byg:pink_cherry__leaves"
+        "item": "byg:pink_cherry_leaves"
       },
       "requiresSilkTouch": true
     }

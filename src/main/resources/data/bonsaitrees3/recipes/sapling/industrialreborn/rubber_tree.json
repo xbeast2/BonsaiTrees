@@ -1,5 +1,6 @@
 {
   "type": "bonsaitrees3:sapling",
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "indreb" }],
   "sapling": {
     "item": "indreb:rubber_sapling"
   },

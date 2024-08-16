@@ -1,5 +1,6 @@
 {
   "type": "bonsaitrees3:sapling",
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "fruittrees" }],
   "sapling": {
     "item": "fruittrees:grapefruit_sapling"
   },

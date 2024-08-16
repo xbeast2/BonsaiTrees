@@ -23,7 +23,7 @@
       "rolls": 2,
       "chance": 0.2,
       "result": {
-        "item": "byg:imparius_block"
+        "item": "byg:imparius_mushroom_block"
       },
       "requiresSilkTouch": true
     },

@@ -1,5 +1,5 @@
 {
-  "type": "bonsaitrees3:sapling/byg/wood_belwit_tree",
+  "type": "bonsaitrees3:sapling/byg/wood_blewit_tree",
   "version": 3,
   "ref": {
     "a": {
@@ -14,7 +14,7 @@
       }
     },
     "b": {
-      "block": "byg:wood_belwit_mushroom_block",
+      "block": "byg:wood_blewit_mushroom_block",
       "properties": {
         "down": "true",
         "east": "true",

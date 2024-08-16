@@ -1,5 +1,5 @@
 {
-  "type": "bonsaitrees3:temporary_tree_model",
+  "type": "bonsaitrees3:sapling/byg/shulkren_tree",
   "version": 3,
   "ref": {
     "a": {"block":"byg:shulkren_wart_block"},
