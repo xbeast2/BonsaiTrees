@@ -29,7 +29,7 @@ public class SetRedstoneMode extends BasePacket {
 
 	@Override
 	public void doWork(Supplier<NetworkEvent.Context> ctx) {
-		var level = ctx.get().getSender().getLevel();
+		var level = ctx.get().getSender().level();
 		BonsaiPotBlockEntity potBlock = (BonsaiPotBlockEntity) level.getBlockEntity(this.pos);
 		if(potBlock != null) {
 			potBlock.redstoneMode = this.mode;

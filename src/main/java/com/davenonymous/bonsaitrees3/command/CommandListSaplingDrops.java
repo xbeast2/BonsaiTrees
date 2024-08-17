@@ -33,16 +33,16 @@ public class CommandListSaplingDrops implements Command<CommandSourceStack> {
 		String type = StringArgumentType.getString(context, "type");
 		Optional<SaplingInfo> optSaplingInfo = Registration.RECIPE_HELPER_SAPLING.get().getRecipeStream(context.getSource().getLevel().getRecipeManager()).filter(s -> s.getId().toString().equals(type)).findFirst();
 		if(!optSaplingInfo.isPresent()) {
-			context.getSource().sendSuccess(Component.literal("Unknown bonsai tree: " + type), false);
+			context.getSource().sendSuccess(() -> Component.literal("Unknown bonsai tree: " + type), false);
 			return 0;
 		}
 
 		SaplingInfo saplingInfo = optSaplingInfo.get();
-		context.getSource().sendSuccess(Component.literal("Registered drops for bonsai tree: " + type), false);
+		context.getSource().sendSuccess(() -> Component.literal("Registered drops for bonsai tree: " + type), false);
 		for(SaplingDrop drop : saplingInfo.drops) {
 			Component stackName = drop.resultStack.getDisplayName();
 			stackName.getSiblings().add(Component.literal(String.format(" [chance=%.2f, rolls=%d, silky=%s, pollinated=%s]", drop.chance, drop.rolls, drop.requiresSilkTouch ? "yes" : "false", drop.requiresBees ? "yes" : "false")));
-			context.getSource().sendSuccess(stackName, false);
+			context.getSource().sendSuccess(() -> stackName, false);
 		}
 
 		return 1;

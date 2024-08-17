@@ -29,13 +29,8 @@ public class BonsaiPotModelLoader implements IGeometryLoader<BonsaiPotModelLoade
 	public static class BonsaiPotModelGeometry implements IUnbakedGeometry<BonsaiPotModelGeometry> {
 
 		@Override
-		public BakedModel bake(IGeometryBakingContext context, ModelBakery bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelState, ItemOverrides overrides, ResourceLocation modelLocation) {
+		public BakedModel bake(IGeometryBakingContext context, ModelBaker bakery, Function<Material, TextureAtlasSprite> spriteGetter, ModelState modelState, ItemOverrides overrides, ResourceLocation modelLocation) {
 			return new BonsaiPotBakedModel(modelState, spriteGetter, overrides, context.getTransforms(), bakery.bake(new ResourceLocation(BonsaiTrees3.MODID, "block/bonsaipot_bricks"), modelState, spriteGetter));
-		}
-
-		@Override
-		public Collection<Material> getMaterials(IGeometryBakingContext context, Function<ResourceLocation, UnbakedModel> modelGetter, Set<Pair<String, String>> missingTextureErrors) {
-			return List.of(BONSAIPOT_BRICKS_MATERIAL);
 		}
 	}
 

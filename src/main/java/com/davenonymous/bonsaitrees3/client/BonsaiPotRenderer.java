@@ -4,8 +4,6 @@ import com.davenonymous.bonsaitrees3.blocks.BonsaiPotBlockEntity;
 import com.davenonymous.bonsaitrees3.config.ClientConfig;
 import com.davenonymous.libnonymous.render.MultiModelBlockRenderer;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.math.Quaternion;
-import com.mojang.math.Vector3f;
 import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -16,6 +14,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.data.ModelData;
+import org.joml.*;
 
 public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEntity> {
 	public static final ResourceLocation WATER = new ResourceLocation("minecraft", "block/water_still");
@@ -59,13 +58,13 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 
 		float progress = (float) pPotBlock.getProgress(pPartialTick);
 		poseStack.scale(progress, progress, progress);
-		
+
 		var rendertype = RenderType.translucent();
 		var mc = Minecraft.getInstance();
 		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FABULOUS.getId()) {
 			rendertype = RenderType.cutout();
 		}
-		
+
 		if(renderItemInstead) {
 			if(saplingInfo.ingredient != null && saplingInfo.ingredient.getItems().length > 0) {
 				Block blockToRender = Block.byItem(saplingInfo.ingredient.getItems()[0].getItem());
@@ -77,7 +76,7 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 			}
 		} else {
 			float rotate = pPotBlock.modelRotation * 90.0f;
-			poseStack.mulPose(new Quaternion(Vector3f.YP, rotate, true));
+			poseStack.mulPose(new Quaternionf(new AxisAngle4f(rotate, 0, 1, 0)));
 
 			float translateOffsetX = (float) (multiBlock.width + 1) / 2.0f;
 			float translateOffsetY = 0.0f;

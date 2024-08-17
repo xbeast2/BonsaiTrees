@@ -50,8 +50,6 @@ public class Registration {
 		RECIPE_SERIALIZERS.register(bus);
 	}
 
-	public static final ResourceKey<Level> GROWTOWN = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation(MODID, "growtown"));
-
 	public static final RegistryObject<RecipeType<SoilInfo>> RECIPE_TYPE_SOIL = RECIPE_TYPES.register("soil", () -> RecipeType.simple(new ResourceLocation(MODID, "soil")));
 	public static final Lazy<SoilRecipeHelper> RECIPE_HELPER_SOIL = Lazy.of(SoilRecipeHelper::new);
 	public static final RegistryObject<RecipeSerializer<?>> SOIL_SERIALIZER = RECIPE_SERIALIZERS.register("soil", SoilSerializer::new);
@@ -70,7 +68,7 @@ public class Registration {
 	public static final RegistryObject<MenuType<BonsaiPotContainer>> BONSAI_POT_CONTAINER = CONTAINERS.register("bonsaipot", () -> IForgeMenuType.create((windowId, inv, data) -> new BonsaiPotContainer(windowId, data.readBlockPos(), inv, inv.player)));
 
 	// Convenience function: Take a RegistryObject<Block> and make a corresponding RegistryObject<Item> from it
-	public static final Item.Properties ITEM_PROPERTIES = new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS);
+	public static final Item.Properties ITEM_PROPERTIES = new Item.Properties();
 
 	private static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
 		return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));

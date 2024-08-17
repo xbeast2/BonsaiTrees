@@ -21,9 +21,9 @@ public class CommandListSoils implements Command<CommandSourceStack> {
 	@Override
 	public int run(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
 
-		context.getSource().sendSuccess(Component.literal("Registered soils:"), false);
+		context.getSource().sendSuccess(() -> Component.literal("Registered soils:"), false);
 		Registration.RECIPE_HELPER_SOIL.get().getRecipeStream(context.getSource().getLevel().getRecipeManager()).forEach(soil -> {
-			context.getSource().sendSuccess(Component.literal(soil.getId().toString()), false);
+			context.getSource().sendSuccess(() -> Component.literal(soil.getId().toString()), false);
 		});
 
 		return 0;

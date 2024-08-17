@@ -213,7 +213,7 @@ public class DatagenSaplings extends BaseDataProvider {
 	public JsonObject addSapling(Item saplingItem, ConfiguredFeature<TreeConfiguration, ?> treeFeature, SaplingDrop... extraDrops) {
 		return addSapling(new Item[]{saplingItem}, treeFeature, extraDrops);
 	}
-	
+
 	public JsonObject addSapling(Item[] saplingItem, ConfiguredFeature<TreeConfiguration, ?> treeFeature, SaplingDrop... extraDrops) {
 		return addSapling(saplingItem, treeFeature, new String[]{"dirt", "grass"}, extraDrops);
 	}
@@ -221,7 +221,7 @@ public class DatagenSaplings extends BaseDataProvider {
 	public JsonObject addSapling(Item saplingItem, ConfiguredFeature<TreeConfiguration, ?> treeFeature, String[] compatibleTags) {
 		return addSapling(new Item[]{saplingItem}, treeFeature, compatibleTags);
 	}
-	
+
 	public JsonObject addSapling(Item[] saplingItem, ConfiguredFeature<TreeConfiguration, ?> treeFeature, String[] compatibleTags) {
 		return addSapling(saplingItem, treeFeature, compatibleTags, new SaplingDrop[0]);
 	}
@@ -241,11 +241,11 @@ public class DatagenSaplings extends BaseDataProvider {
 		for (var saplingItem : saplingItems) {
 			JsonObject saplingObject = new JsonObject();
 			saplingObject.addProperty("item", ForgeRegistries.ITEMS.getKey(saplingItem).toString());
-			
+
 			saplings.add(saplingObject);
 			addDrop(drops, saplingItem, 1, 0.05f);
 		}
-		
+
 		root.add("sapling", saplings);
 
 		for(var trunkState : getProviderBlockStates(tc.trunkProvider)) {
@@ -287,7 +287,7 @@ public class DatagenSaplings extends BaseDataProvider {
 	public void addDrop(JsonArray drops, SaplingDrop drop) {
 		JsonObject root = new JsonObject();
 		root.addProperty("rolls", drop.rolls);
-		root.addProperty("chance", getRounded(drop.chance));
+		root.addProperty("chance", BaseDataProvider.getRounded(drop.chance));
 		root.add("result", new Ingredient.ItemValue(drop.resultStack).serialize());
 		if(drop.requiresSilkTouch) {
 			root.addProperty("requiresSilkTouch", true);
@@ -329,7 +329,7 @@ public class DatagenSaplings extends BaseDataProvider {
 
 		JsonObject root = new JsonObject();
 		root.addProperty("rolls", rolls);
-		root.addProperty("chance", getRounded(chance));
+		root.addProperty("chance", BaseDataProvider.getRounded(chance));
 		root.add("result", new Ingredient.ItemValue(drop).serialize());
 		if(requiresSilkTouch) {
 			root.addProperty("requiresSilkTouch", true);

@@ -1,64 +1,22 @@
 package com.davenonymous.bonsaitrees3.command;
 
-import com.davenonymous.bonsaitrees3.BonsaiTrees3;
-import com.davenonymous.bonsaitrees3.datagen.server.DatagenSaplings;
 import com.davenonymous.libnonymous.commands.SimpleCommandReply;
-import com.davenonymous.libnonymous.reflections.AbstractTreeGrowerReflection;
-import com.davenonymous.libnonymous.reflections.SaplingBlockReflection;
-import com.davenonymous.libnonymous.serialization.MultiblockBlockModel;
 import com.davenonymous.libnonymous.utils.ComponentUtils;
-import com.davenonymous.libnonymous.utils.TeleporterTools;
-import com.davenonymous.bonsaitrees3.setup.Registration;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Lists;
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.builder.ArgumentBuilder;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
-import com.mojang.datafixers.util.Unit;
-
-import net.minecraft.SharedConstants;
-import net.minecraft.Util;
-import net.minecraft.client.Minecraft;
 import net.minecraft.commands.CommandBuildContext;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.blocks.BlockStateArgument;
 import net.minecraft.core.BlockPos;
-import net.minecraft.data.BuiltinRegistries;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.level.ServerChunkCache;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.util.thread.ProcessorMailbox;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.SaplingBlock;
-import net.minecraft.world.level.block.grower.AbstractTreeGrower;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.chunk.ChunkAccess;
-import net.minecraft.world.level.chunk.ChunkStatus;
-import net.minecraft.world.level.chunk.ImposterProtoChunk;
-import net.minecraft.world.level.chunk.LevelChunk;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.server.command.ModIdArgument;
-
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.world.level.block.Block.UPDATE_ALL;
 
@@ -85,6 +43,7 @@ public class CommandTreeGenerator implements Command<CommandSourceStack> {
 	}
 
 	private int doit(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+		/*
 		ServerPlayer player = context.getSource().getPlayerOrException();
 
 		if(!player.getLevel().dimension().equals(Registration.GROWTOWN)) {
@@ -206,7 +165,7 @@ public class CommandTreeGenerator implements Command<CommandSourceStack> {
 		}
 
 		context.getSource().sendSuccess(ComponentUtils.format("Done! Wrote %d sapling and model files", count), false);
-
+		*/
 		return 0;
 	}
 
@@ -245,7 +204,7 @@ public class CommandTreeGenerator implements Command<CommandSourceStack> {
 			}
 		}
 	}
-
+/*
 	private static int resetChunks(CommandSourceStack p_183685_, BlockPos pos, int p_183686_, boolean p_183687_) {
 		ServerLevel serverlevel = p_183685_.getLevel();
 		ServerChunkCache serverchunkcache = serverlevel.getChunkSource();
@@ -332,4 +291,5 @@ public class CommandTreeGenerator implements Command<CommandSourceStack> {
 
 		return 1;
 	}
+	*/
 }

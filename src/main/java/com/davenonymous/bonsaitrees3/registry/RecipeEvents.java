@@ -1,6 +1,6 @@
 package com.davenonymous.bonsaitrees3.registry;
 
-import com.davenonymous.bonsaitrees3.compat.jei.BonsaiTreesJEIPlugin;
+//import com.davenonymous.bonsaitrees3.compat.jei.BonsaiTreesJEIPlugin;
 import com.davenonymous.bonsaitrees3.setup.Registration;
 import net.minecraftforge.client.event.RecipesUpdatedEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,7 +24,7 @@ public class RecipeEvents {
 
 		SoilCompatibility.INSTANCE.update(event.getRecipeManager().getRecipes());
 		if(ModList.get().isLoaded("jei")) {
-			BonsaiTreesJEIPlugin.saplings = Registration.RECIPE_HELPER_SAPLING.get().getRecipesList(event.getRecipeManager());
+			// BonsaiTreesJEIPlugin.saplings = Registration.RECIPE_HELPER_SAPLING.get().getRecipesList(event.getRecipeManager());
 		}
 
 	}

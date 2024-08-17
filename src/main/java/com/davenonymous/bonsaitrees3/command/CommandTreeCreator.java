@@ -30,19 +30,19 @@ public class CommandTreeCreator implements Command<CommandSourceStack> {
 		BlockPos pos = BlockPosArgument.getLoadedBlockPos(context, "pos");
 		model.setBlocksByFloodFill(context.getSource().getLevel(), pos);
 
-		context.getSource().sendSuccess(Component.literal(String.format("Model consists of %d blocks", model.getBlockCount())), false);
+		context.getSource().sendSuccess(() -> Component.literal(String.format("Model consists of %d blocks", model.getBlockCount())), false);
 
 		for(var state : model.reverseBlocks.keySet()) {
 			int count = model.reverseBlocks.get(state).size();
-			context.getSource().sendSuccess(Component.literal(String.format("%d %s", count, state)), false);
+			context.getSource().sendSuccess(() -> Component.literal(String.format("%d %s", count, state)), false);
 		}
 
 		ServerPlayer player = context.getSource().getPlayerOrException();
 		Networking.sendModelToClipboard(player.connection.connection, model);
 
-		context.getSource().sendSuccess(Component.literal("Model json copied to the clipboard!"), false);
+		context.getSource().sendSuccess(() -> Component.literal("Model json copied to the clipboard!"), false);
 
-		context.getSource().sendSuccess(Component.literal("JSON:" + model.serializePretty()), false);
+		context.getSource().sendSuccess(() -> Component.literal("JSON:" + model.serializePretty()), false);
 
 		return 0;
 	}

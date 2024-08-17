@@ -11,8 +11,7 @@ import com.davenonymous.bonsaitrees3.registry.sapling.SaplingInfo;
 import com.davenonymous.bonsaitrees3.registry.soil.SoilInfo;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.Tesselator;
-import com.mojang.math.Quaternion;
-import com.mojang.math.Vector3f;
+
 import mezz.jei.api.gui.ITickTimer;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
@@ -24,6 +23,7 @@ import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
@@ -32,6 +32,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.ForgeRegistries;
 
+import org.joml.AxisAngle4f;
+import org.joml.Quaternionf;
 import org.lwjgl.opengl.GL11;
 
 import java.util.*;
@@ -46,9 +48,9 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 	public BonsaiRecipeWrapper(SaplingInfo sapling) {
 		this.sapling = sapling;
 	}
-	
+
 	public void setRecipe(IRecipeLayoutBuilder builder, IFocusGroup focuses) {
-		
+
 		builder.addSlot(RecipeIngredientRole.INPUT, 1, 1)
 			.setSlotName("sapling").addTooltipCallback(this)
 			.addItemStacks(Arrays.stream(sapling.ingredient.getItems()).toList());
@@ -60,11 +62,11 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 			tickModifiers.put(ForgeRegistries.ITEMS.getKey(representation.getItem()), soil.getTickModifier());
 			soilStacks.add(representation);
 		}
-		
+
 		builder.addSlot(RecipeIngredientRole.INPUT, 1, 20)
 			.setSlotName("soil").addTooltipCallback(this)
 			.addItemStacks(soilStacks);
-		
+
 		slotDrops = new HashMap<String, SaplingDrop>();
 
 		for (int slot = 0; slot < sapling.drops.size(); slot++) {
@@ -72,45 +74,47 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 			ItemStack dropStack = drop.resultStack.copy();
 			dropStack.setCount(drop.rolls);
 			slotDrops.put("output_" + slot, drop);
-			
+
 			builder.addSlot(RecipeIngredientRole.OUTPUT, 81 + 19 * (slot % 4), 1 + 19 * (slot / 4))
 				.setSlotName("output_" + slot).addTooltipCallback(this)
 				.addItemStack(dropStack);
 		}
     }
-	
-	public void draw(IRecipeSlotsView view, PoseStack stack, double mouseX, double mouseY, IGuiHelper guiHelper) {
+
+	public void draw(IRecipeSlotsView view, GuiGraphics stack, double mouseX, double mouseY, IGuiHelper guiHelper) {
     	final IDrawableStatic slotDrawable = guiHelper.getSlotDrawable();
-    	
+
     	slotDrawable.draw(stack, 0, 0);
 		slotDrawable.draw(stack, 0, 19);
-		
+
 		for (int i = 0; i < 8; i++)
 			slotDrawable.draw(stack, 80 + 19 * (i % 4), 19 * (i / 4));
-		
+
 		drawBonsai(stack);
     }
 
-	private void drawBonsai(PoseStack pose) {
+	private void drawBonsai(GuiGraphics guiGraphics) {
 		var model = TreeModels.get(sapling.getId());
 		if(model == null) {
 			return;
 		}
 
-		pose.pushPose();
-		pose.translate(50f, 20f, 100.0f);
-		pose.scale(36f, 36f, 36f);
+		guiGraphics.pose().pushPose();
+		guiGraphics.pose().translate(50f, 20f, 100.0f);
+		guiGraphics.pose().scale(36f, 36f, 36f);
 
 		float scale = (float) model.getScaleRatio(true);
-		pose.scale(scale, scale, scale);
+		guiGraphics.pose().scale(scale, scale, scale);
 
-		pose.mulPose(Quaternion.fromXYZDegrees(new Vector3f(-25.0f + 180.0f, 1.0f, 0.0f)));
+		guiGraphics.pose().mulPose(new Quaternionf(new AxisAngle4f(-25.0f + 180.0f, 1, 0, 0)));
+		//guiGraphics.pose().mulPose(Quaternion.fromXYZDegrees(new Vector3f(-25.0f + 180.0f, 1.0f, 0.0f)));
 
 		if(tickTimer != null) {
-			pose.mulPose(Quaternion.fromXYZDegrees(new Vector3f(0, tickTimer.getValue(), 0.0f)));
+			//guiGraphics.pose().mulPose(Quaternion.fromXYZDegrees(new Vector3f(0, tickTimer.getValue(), 0.0f)));
+			guiGraphics.pose().mulPose(new Quaternionf(new AxisAngle4f(tickTimer.getValue(), 0, 1, 0)));
 		}
 
-		pose.translate((model.width + 1) / -2.0f, (model.height + 1) / -2.0f, (model.depth + 1) / -2.0f);
+		guiGraphics.pose().translate((model.width + 1) / -2.0f, (model.height + 1) / -2.0f, (model.depth + 1) / -2.0f);
 
 		MultiBufferSource.BufferSource bufferSource = MultiBufferSource.immediate(Tesselator.getInstance().getBuilder());
 		var buffer = bufferSource.getBuffer(RenderType.cutout());
@@ -118,12 +122,12 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 		GL11.glFrontFace(GL11.GL_CW);
 
 		var mc = Minecraft.getInstance();
-		MultiModelBlockRenderer.renderMultiBlockModel(model, mc.level, buffer, pose, LightTexture.FULL_BRIGHT);
+		MultiModelBlockRenderer.renderMultiBlockModel(model, mc.level, buffer, guiGraphics.pose(), LightTexture.FULL_BRIGHT);
 
 		bufferSource.endBatch();
 		GL11.glFrontFace(GL11.GL_CCW);
 
-		pose.popPose();
+		guiGraphics.pose().popPose();
 	}
 
 	@Override

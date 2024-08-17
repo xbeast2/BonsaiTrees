@@ -25,13 +25,13 @@ public class CommandListSaplings implements Command<CommandSourceStack> {
 
 	@Override
 	public int run(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
-		context.getSource().sendSuccess(Component.literal("Registered saplings:"), false);
+		context.getSource().sendSuccess(() -> Component.literal("Registered saplings:"), false);
 
 		Registration.RECIPE_HELPER_SAPLING.get().getRecipeStream(context.getSource().getLevel().getRecipeManager()).forEach(sapling -> {
 			Set<SoilInfo> soilInfo = SoilCompatibility.INSTANCE.getValidSoilsForSapling(sapling);
 			String soils = String.join(", ", soilInfo.stream().map(s -> s.getId().toString()).collect(Collectors.toList()));
 			Component message = Component.literal(String.format("%s <- %s [soils: %s]", sapling.getId(), sapling.ingredient.toJson(), soils));
-			context.getSource().sendSuccess(message, false);
+			context.getSource().sendSuccess(() -> message, false);
 		});
 
 		return 0;

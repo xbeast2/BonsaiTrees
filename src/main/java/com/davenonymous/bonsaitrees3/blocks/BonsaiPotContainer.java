@@ -27,7 +27,8 @@ public class BonsaiPotContainer extends WidgetContainer {
 		this.layoutPlayerInventorySlots(8, HEIGHT - 84);
 
 		int yOffset = 20;
-		pot = (BonsaiPotBlockEntity) player.getLevel().getBlockEntity(pos);
+		pot = (BonsaiPotBlockEntity) player.getCommandSenderWorld().getBlockEntity(pos);
+		//pot = (BonsaiPotBlockEntity) player.getLevel().getBlockEntity(pos);
 		if(pot != null) {
 			int x = WIDTH - 8 - (18 * 3) + 2;
 

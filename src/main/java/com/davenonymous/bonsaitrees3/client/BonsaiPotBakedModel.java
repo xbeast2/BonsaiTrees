@@ -2,7 +2,7 @@ package com.davenonymous.bonsaitrees3.client;
 
 import com.davenonymous.bonsaitrees3.blocks.BonsaiPotBlockEntity;
 import com.davenonymous.libnonymous.render.QuadBaker;
-import com.mojang.math.Matrix4f;
+import org.joml.Matrix4f;
 import com.mojang.math.Transformation;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
@@ -30,6 +30,7 @@ import net.minecraftforge.fluids.FluidStack;
 import javax.annotation.Nullable;
 
 import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.*;
 import java.util.function.Function;
@@ -72,9 +73,9 @@ public class BonsaiPotBakedModel implements IDynamicBakedModel {
 			if(!quadCache.containsKey(soilBlock)) {
 				List<BakedQuad> potQuads = new ArrayList<>(this.potModel.getQuads(state, side, rand, extraData, renderType));
 
-				Transformation transformation = new Transformation(Matrix4f.createScaleMatrix(1 / 16.0f, 1 / 16.0f, 1 / 16.0f));
-				transformation = transformation.compose(new Transformation(Matrix4f.createTranslateMatrix(2.0f, 1.1f, 2.0f)));
-				transformation = transformation.compose(new Transformation(Matrix4f.createScaleMatrix(12.0f, 1.0f, 12.0f)));
+				Transformation transformation = new Transformation(new Matrix4f().scale(1 / 16.0f, 1 / 16.0f, 1 / 16.0f));
+				transformation = transformation.compose(new Transformation(new Matrix4f().translate(2.0f, 1.1f, 2.0f)));
+				transformation = transformation.compose(new Transformation(new Matrix4f().scale(12.0f, 1.0f, 12.0f)));
 				IQuadTransformer quadTransformer = QuadTransformers.applying(transformation);
 
 				BakedModel model = Minecraft.getInstance().getBlockRenderer().getBlockModelShaper().getBlockModel(soilBlock);
@@ -97,7 +98,7 @@ public class BonsaiPotBakedModel implements IDynamicBakedModel {
 				float b = (float) (i & 255) / 255.0F;
 
 				var height = 0.125f;
-				var quad = QuadBaker.createQuad(QuadBaker.v(0.1f, height, 0.1f), QuadBaker.v(0.1f, height, 0.9f), QuadBaker.v(0.9f, height, 0.9f), QuadBaker.v(0.9f, height, 0.1f), Transformation.identity(), sprite, r, g, b, alpha);
+				var quad = QuadBaker.createQuad(new Vec3(0.1f, height, 0.1f), new Vec3(0.1f, height, 0.9f), new Vec3(0.9f, height, 0.9f), new Vec3(0.9f, height, 0.1f), Transformation.identity(), sprite, r, g, b, alpha);
 
 				potQuads.add(quad);
 				fluidQuadCache.put(fluidBlock, potQuads);
@@ -112,7 +113,7 @@ public class BonsaiPotBakedModel implements IDynamicBakedModel {
 	/*private BakedQuad untintQuad(BakedQuad input) {
 		return new BakedQuad(input.getVertices(), -1, input.getDirection(), input.getSprite(), input.isShade());
 	}*/
-	
+
 	@Nullable
     private TextureAtlasSprite getFluidTexture(FluidStack stack) {
 		Minecraft mc = Minecraft.getInstance();

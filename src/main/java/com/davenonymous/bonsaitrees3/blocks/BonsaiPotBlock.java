@@ -9,6 +9,7 @@ import com.davenonymous.bonsaitrees3.setup.Registration;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.ProbeMode;
+import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -26,13 +27,14 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -47,7 +49,7 @@ public class BonsaiPotBlock extends BaseBlock implements BonemealableBlock, ITop
 	private final VoxelShape shape = Shapes.box(0.065f, 0.005f, 0.065f, 0.935f, 0.185f, 0.935f);
 
 	public BonsaiPotBlock() {
-		super(Properties.of(Material.STONE).sound(SoundType.GRASS).strength(2.0f).requiresCorrectToolForDrops());
+		super(Properties.of().sound(SoundType.GRASS).mapColor(MapColor.GRASS).strength(2.0f).requiresCorrectToolForDrops());
 
 		this.registerDefaultState(this.getStateDefinition().any().setValue(CustomBlockStateProperties.COLOR, DyeColor.LIGHT_GRAY.getId()));
 	}
@@ -184,7 +186,7 @@ public class BonsaiPotBlock extends BaseBlock implements BonemealableBlock, ITop
 	}
 
 	@Override
-	public boolean isValidBonemealTarget(BlockGetter pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
+	public boolean isValidBonemealTarget(LevelReader pLevel, BlockPos pPos, BlockState pState, boolean pIsClient) {
 		if(!CommonConfig.allowBonemeal.get()) {
 			return false;
 		}
