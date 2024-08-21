@@ -16,6 +16,8 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.data.ModelData;
 import org.joml.*;
 
+import java.lang.Math;
+
 public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEntity> {
 	public static final ResourceLocation WATER = new ResourceLocation("minecraft", "block/water_still");
 
@@ -75,8 +77,8 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 				}
 			}
 		} else {
-			float rotate = pPotBlock.modelRotation * 90.0f;
-			poseStack.mulPose(new Quaternionf(new AxisAngle4f(rotate, 0, 1, 0)));
+			double rotate = Math.toRadians(pPotBlock.modelRotation * 90.0f);
+			poseStack.mulPose(new Quaternionf(new AxisAngle4f((float)rotate, 0, 1, 0)));
 
 			float translateOffsetX = (float) (multiBlock.width + 1) / 2.0f;
 			float translateOffsetY = 0.0f;
