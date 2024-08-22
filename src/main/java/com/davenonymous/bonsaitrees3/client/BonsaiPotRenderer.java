@@ -86,7 +86,7 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 			poseStack.translate(-translateOffsetX, -translateOffsetY, -translateOffsetZ);
 
 			var buffer = pBufferSource.getBuffer(rendertype);
-			MultiModelBlockRenderer.renderMultiBlockModel(multiBlock, pPotBlock.getLevel(), buffer, poseStack, pPackedLight);
+			MultiModelBlockRenderer.renderMultiBlockModel(multiBlock, pPotBlock.getLevel(), pPotBlock.getBlockState(), pPotBlock.getBlockPos(), buffer, poseStack, pPackedLight);
 		}
 
 		poseStack.popPose();

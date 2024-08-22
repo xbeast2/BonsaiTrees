@@ -121,7 +121,7 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 		GL11.glFrontFace(GL11.GL_CW);
 
 		var mc = Minecraft.getInstance();
-		MultiModelBlockRenderer.renderMultiBlockModel(model, mc.level, buffer, guiGraphics.pose(), LightTexture.FULL_BRIGHT);
+		MultiModelBlockRenderer.renderMultiBlockModel(model, mc.level, buffer, guiGraphics.pose(), LightTexture.FULL_BLOCK);
 
 		bufferSource.endBatch();
 		GL11.glFrontFace(GL11.GL_CCW);
