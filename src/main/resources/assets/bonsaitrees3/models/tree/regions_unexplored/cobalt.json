@@ -1,0 +1,39 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/cobalt",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:cobalt_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:cobalt_log","properties":{"axis":"z"}},
+    "c": {"block":"regions_unexplored:cobalt_webbing","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:cobalt_webbing","properties":{"distance":"1","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "   c ",
+      "  cdc",
+      " c   ",
+      "cdd  ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "  cdc",
+      "  dad",
+      "cdda ",
+      "daba ",
+      " ab  ",
+      " a   ",
+      " a   "
+    ],
+    [
+      "   c ",
+      "  cdc",
+      " c   ",
+      "cdd  ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

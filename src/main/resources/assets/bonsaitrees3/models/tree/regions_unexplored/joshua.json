@@ -1,0 +1,94 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/joshua",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:joshua_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:joshua_beard","properties":{"facing":"east"}},
+    "c": {"block":"regions_unexplored:joshua_leaves","properties":{"half":"lower","natural":"true","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:joshua_leaves","properties":{"half":"upper","natural":"true","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:joshua_beard","properties":{"facing":"north"}},
+    "f": {"block":"regions_unexplored:joshua_beard","properties":{"facing":"south"}},
+    "g": {"block":"regions_unexplored:joshua_log","properties":{"axis":"x"}},
+    "h": {"block":"regions_unexplored:joshua_beard","properties":{"facing":"west"}},
+    "i": {"block":"regions_unexplored:joshua_log","properties":{"axis":"z"}}
+  },
+  "shape": [
+    [
+      "       ",
+      "       ",
+      "       ",
+      "   b   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "   d   ",
+      "   c   ",
+      "  eaf  ",
+      "   a   ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "   b   ",
+      " b h b ",
+      "       ",
+      "   g   ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "   d   ",
+      " d c d ",
+      " ceafc ",
+      "eafaeaf",
+      " a a a ",
+      "  iai  ",
+      "   a   ",
+      "   a   ",
+      "   a   "
+    ],
+    [
+      "       ",
+      "       ",
+      "   h   ",
+      " h b h ",
+      "       ",
+      "   g   ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "   d   ",
+      "   c   ",
+      "  eaf  ",
+      "   a   ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "       ",
+      "   h   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

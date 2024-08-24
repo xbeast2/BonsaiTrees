@@ -1,0 +1,62 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/flowering",
+  "version": 3,
+  "ref": {
+    "a": {"block":"minecraft:oak_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:flowering_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:flowering_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:flowering_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"minecraft:oak_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"minecraft:oak_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"minecraft:oak_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"minecraft:oak_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"regions_unexplored:flowering_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "bfefg",
+      "gfef ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "  e  ",
+      "  d  ",
+      "fedef",
+      "cihef",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      " ede ",
+      " hah ",
+      "ehade",
+      "ihahi",
+      "  a  ",
+      "  a  ",
+      "  a  "
+    ],
+    [
+      "  e  ",
+      " ehe ",
+      "fehec",
+      "cehef",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      " fef ",
+      " fef ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "type": "bonsaitrees3:sapling/ecologics/walnut",
+  "version": 3,
+  "ref": {
+    "a": {"block":"ecologics:walnut_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"ecologics:walnut_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"ecologics:walnut_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"ecologics:walnut_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"ecologics:walnut_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"ecologics:walnut_log","properties":{"axis":"y"}},
+    "g": {"block":"ecologics:walnut_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"ecologics:walnut_leaves","properties":{"distance":"7","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "hg  h",
+      "  e g",
+      " ed c",
+      "  a  ",
+      " da  ",
+      "     ",
+      "     "
+    ],
+    [
+      " cec ",
+      " edec",
+      "edade",
+      "dabad",
+      " ab  ",
+      "     ",
+      "     "
+    ],
+    [
+      "c dec",
+      "edade",
+      "dabad",
+      "abfba",
+      " bfba",
+      "  f  ",
+      "  f  "
+    ],
+    [
+      "gce g",
+      " ede ",
+      "edad ",
+      "dab  ",
+      " ab  ",
+      "     ",
+      "     "
+    ],
+    [
+      " g  h",
+      "gce  ",
+      "ced  ",
+      "  ade",
+      " dad ",
+      "     ",
+      "     "
+    ]
+  ]
+}

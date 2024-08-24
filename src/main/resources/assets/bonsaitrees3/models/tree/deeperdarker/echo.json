@@ -1,0 +1,108 @@
+{
+  "type": "bonsaitrees3:sapling/deeperdarker/echo",
+  "version": 3,
+  "ref": {
+    "a": {"block":"deeperdarker:echo_log","properties":{"axis":"y"}},
+    "b": {"block":"deeperdarker:echo_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"deeperdarker:echo_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"deeperdarker:echo_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"deeperdarker:sculk_gleam"},
+    "f": {"block":"deeperdarker:echo_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"deeperdarker:echo_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"deeperdarker:echo_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"deeperdarker:echo_log","properties":{"axis":"z"}}
+  },
+  "shape": [
+    [
+      "             ",
+      "             ",
+      "        dbdh ",
+      " hdbdd  bgbd ",
+      "  bge   bgb  ",
+      "  bg    db   ",
+      "             ",
+      "             ",
+      "             ",
+      "             ",
+      "             "
+    ],
+    [
+      "             ",
+      "       hdbd  ",
+      " hdbddhdbgbdh",
+      "hdbgbbdbgfgbd",
+      " bgfggb gfgbe",
+      " bgfffg bgbd ",
+      " dbg    eb e ",
+      "  db         ",
+      "  e          ",
+      "             ",
+      "             "
+    ],
+    [
+      "        dbd  ",
+      "  dbd  dbgbd ",
+      " dbgbbdbgfgbd",
+      "dbgfggbgfcfgb",
+      " gfcffggfcfgb",
+      " gfcccfg   bd",
+      "  e  cfg   d ",
+      "       e     ",
+      "             ",
+      "             ",
+      "             "
+    ],
+    [
+      "        bgb  ",
+      "  bgb  bgfgb ",
+      " bgfggbgfcfgb",
+      "bgfcffgfcacf ",
+      "gfcaccffcacf ",
+      " fciiacf a g ",
+      " g   a   a   ",
+      "     a aii   ",
+      "     iia     ",
+      "       a     ",
+      "       a     "
+    ],
+    [
+      "        dbd  ",
+      "  db   dbgbd ",
+      " dbgbbdbgfgbd",
+      "dbgfggbgfcfgb",
+      "bgfcff gfcfgb",
+      "bgfccc     be",
+      " b   e       ",
+      "             ",
+      "             ",
+      "             ",
+      "             "
+    ],
+    [
+      "             ",
+      "       hdbdh ",
+      " hdbdd dbgbdh",
+      " dbgbbdbgfgbd",
+      " bgfggbbgfgbd",
+      " bgfff dbe   ",
+      " de g        ",
+      "             ",
+      "             ",
+      "             ",
+      "             "
+    ],
+    [
+      "             ",
+      "             ",
+      "       hdbdh ",
+      " hdbdd  bgb  ",
+      " db bb   gb  ",
+      "  b ge   b   ",
+      "  d b        ",
+      "             ",
+      "             ",
+      "             ",
+      "             "
+    ]
+  ]
+}

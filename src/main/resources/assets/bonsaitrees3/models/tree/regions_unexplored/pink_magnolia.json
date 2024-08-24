@@ -1,0 +1,160 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/pink_magnolia",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"x"}},
+    "g": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"regions_unexplored:pink_magnolia_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "           ",
+      "           ",
+      "     hgdgh ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "       dg  ",
+      "    hgdcdgh",
+      "       bc  ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     gdcd  ",
+      "    gdcbcdg",
+      "     cbeb  ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     dcbcd ",
+      "    dcbebcd",
+      "     befeb ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "      ccdg ",
+      "    dcbbcdg",
+      "      eebc ",
+      "      f    ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      " hgdddcd   ",
+      "    dcbcdgh",
+      "      eb   ",
+      "      f    ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "    a      "
+    ],
+    [
+      "  gd       ",
+      "hgdccdd    ",
+      "  cb ccdgh ",
+      "           ",
+      "           ",
+      "     a     ",
+      "     a     ",
+      "     a     ",
+      "     a     ",
+      "     a     "
+    ],
+    [
+      "  dccd     ",
+      "gdcbbcd    ",
+      "  beeb     ",
+      "    a      ",
+      "    a      ",
+      "    a      ",
+      "           ",
+      "           ",
+      "           ",
+      "     f     "
+    ],
+    [
+      " dcbcd     ",
+      "dcbebcd    ",
+      " beaeb     ",
+      "   a       ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      " gdcd      ",
+      "gdcbcdg    ",
+      " cbeb      ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "   dg      ",
+      "hgdcdgh    ",
+      "   bc      ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      " hgdgh     ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ]
+  ]
+}

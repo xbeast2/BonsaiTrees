@@ -1,0 +1,149 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/magnolia",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"y"}},
+    "g": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"z"}},
+    "h": {"block":"regions_unexplored:magnolia_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"x"}}
+  },
+  "shape": [
+    [
+      "       ",
+      " hcdch ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  cd   ",
+      "hcdedch",
+      "  eb   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  dedc ",
+      "cdebedc",
+      "  babe ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " debed ",
+      "debabed",
+      " bafab ",
+      "   f   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " cded  ",
+      "cdebedc",
+      " ebab  ",
+      "   f   ",
+      "   f   ",
+      "   f   ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "   dc  ",
+      "hcdedch",
+      " debed ",
+      "       ",
+      "       ",
+      "   f   ",
+      "   f   ",
+      "   f   ",
+      "   fg  "
+    ],
+    [
+      "       ",
+      " cdedc ",
+      "cdebedc",
+      "   ab  ",
+      "   i   ",
+      "       ",
+      "       ",
+      "       ",
+      "  f    "
+    ],
+    [
+      "       ",
+      " cded  ",
+      "cdebedc",
+      " ebab  ",
+      "   i   ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      " debed ",
+      "debabed",
+      " baiab ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "  dedc ",
+      "cdebedc",
+      "  babe ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "  cd   ",
+      "hcdedch",
+      "  eb   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      " hcdch ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

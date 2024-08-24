@@ -1,0 +1,113 @@
+{
+  "type": "bonsaitrees3:sapling/architects_palette/twisted",
+  "version": 3,
+  "ref": {
+    "a": {"block":"architects_palette:twisted_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"architects_palette:twisted_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"architects_palette:twisted_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"architects_palette:twisted_log","properties":{"axis":"y"}},
+    "e": {"block":"architects_palette:twisted_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"architects_palette:twisted_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "       ",
+      "       ",
+      "       ",
+      "  cbc  ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "  cbc  ",
+      " cbabc ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "  bab  ",
+      " badab ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "  cbc  ",
+      " cbabc ",
+      "   d   ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      " efcfe ",
+      "       ",
+      "  bab  ",
+      "   d   ",
+      "   d   ",
+      "   d   "
+    ],
+    [
+      "   c   ",
+      "efcbcfe",
+      "       ",
+      "   d   ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  cbc  ",
+      "fcbabcf",
+      "   d   ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " cbabc ",
+      "cbadabc",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  cbc  ",
+      "fcbabcf",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "   c   ",
+      "efcbcfe",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      " efcfe ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

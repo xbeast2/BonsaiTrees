@@ -1,0 +1,64 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/enchanted_birch",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:enchanted_birch_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:silver_birch_log","properties":{"axis":"y","is_base":"false"}},
+    "c": {"block":"regions_unexplored:enchanted_birch_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:silver_birch_log","properties":{"axis":"x","is_base":"false"}},
+    "e": {"block":"regions_unexplored:enchanted_birch_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:enchanted_birch_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "     ",
+      "  a  ",
+      "     ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "  e  ",
+      "  f  ",
+      " faf ",
+      " aca ",
+      "     ",
+      "  d  ",
+      "     ",
+      "     "
+    ],
+    [
+      " efe ",
+      " faf ",
+      " aca ",
+      "acbca",
+      "  b  ",
+      "  b  ",
+      "  b  ",
+      "  b  "
+    ],
+    [
+      "  e  ",
+      "  f  ",
+      " faf ",
+      " aca ",
+      "     ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "     ",
+      "  a  ",
+      "     ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

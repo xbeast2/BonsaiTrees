@@ -1,0 +1,112 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/eucalyptus",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:eucalyptus_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:eucalyptus_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:eucalyptus_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:eucalyptus_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:eucalyptus_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:eucalyptus_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "       ",
+      "       ",
+      "       ",
+      " fedef ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "  ede  ",
+      "fedbdef",
+      "  dbd  ",
+      "   b   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "  ed   ",
+      " edbde ",
+      "edbcbde",
+      " dbcbd ",
+      "  bcb  ",
+      "   c   ",
+      "   c   ",
+      "       ",
+      "       ",
+      "   a   ",
+      "   a   "
+    ],
+    [
+      "   d   ",
+      "  dbd  ",
+      " dbcbd ",
+      "dbcacbd",
+      " bcacb ",
+      " bcacb ",
+      "  cac  ",
+      "  cac  ",
+      "  ca   ",
+      "   a   ",
+      "   a   ",
+      "  aaa  "
+    ],
+    [
+      "       ",
+      "   d   ",
+      " edbde ",
+      "edbcbde",
+      " dbcbd ",
+      "  bcb  ",
+      "   c   ",
+      "   c   ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "  ede  ",
+      "fedbdef",
+      "  dbd  ",
+      "   b   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "       ",
+      " fedef ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

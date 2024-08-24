@@ -1,0 +1,146 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/socotra",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:socotra_log","properties":{"axis":"x"}},
+    "b": {"block":"regions_unexplored:socotra_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:socotra_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:socotra_log","properties":{"axis":"z"}},
+    "e": {"block":"regions_unexplored:socotra_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:socotra_log","properties":{"axis":"y"}}
+  },
+  "shape": [
+    [
+      "           ",
+      "           ",
+      "           ",
+      "     b     ",
+      "    bcb    ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "           ",
+      "   bbcb    ",
+      "   bcacb   ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     b     ",
+      "   bbcbb   ",
+      "  bcccccb  ",
+      "   cdadc   ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "    bcb    ",
+      "  bccaccb  ",
+      "  cdcccac  ",
+      " bcccccccb ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "     b     ",
+      "   bbcbb   ",
+      "  bccaccb  ",
+      " bccc cccb ",
+      "bcacd acacb",
+      "           ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "    bcb    ",
+      "  bccfccb  ",
+      "  cddfddc  ",
+      "bcc  f cccb",
+      "cddc f cddc",
+      "  dd f dd  ",
+      "    dfd    ",
+      "     f     ",
+      "     f     ",
+      "     f     "
+    ],
+    [
+      "    eb     ",
+      "  ebbcbb   ",
+      "  bccaccb  ",
+      " bccc cccbe",
+      "bcaca dcacb",
+      "           ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "    bcb    ",
+      "  bccaccb  ",
+      "  cacccdc  ",
+      " bcccccccb ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     b     ",
+      "   bbcbb   ",
+      "  bcccccb  ",
+      "   cdadc   ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "           ",
+      "    bcb    ",
+      "   bcacb   ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "           ",
+      "    eb     ",
+      "    bcb    ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ]
+  ]
+}

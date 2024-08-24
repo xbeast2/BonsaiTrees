@@ -1,0 +1,66 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/small_oak",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:small_oak_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:small_oak_log","properties":{"axis":"y","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:oak_branch","properties":{"facing":"north"}},
+    "d": {"block":"regions_unexplored:oak_branch","properties":{"facing":"south"}},
+    "e": {"block":"regions_unexplored:small_oak_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:small_oak_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:oak_branch","properties":{"facing":"west"}},
+    "h": {"block":"regions_unexplored:oak_branch","properties":{"facing":"east"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "  a  ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "  f  ",
+      "  a  ",
+      " aha ",
+      " aaa ",
+      "     ",
+      "     "
+    ],
+    [
+      "  e  ",
+      "  f  ",
+      " faf ",
+      " aba ",
+      " aba ",
+      "acbda",
+      " aba ",
+      "  b  "
+    ],
+    [
+      "     ",
+      "     ",
+      "  f  ",
+      "  a  ",
+      " aga ",
+      " aaa ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "  a  ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

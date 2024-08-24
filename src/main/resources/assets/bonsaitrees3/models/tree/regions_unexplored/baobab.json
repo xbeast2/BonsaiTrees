@@ -1,0 +1,107 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/baobab",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:baobab_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:baobab_log","properties":{"axis":"y"}},
+    "c": {"block":"regions_unexplored:baobab_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:baobab_log","properties":{"axis":"z"}},
+    "e": {"block":"regions_unexplored:baobab_branch","properties":{"facing":"east"}},
+    "f": {"block":"regions_unexplored:baobab_branch","properties":{"facing":"north"}},
+    "g": {"block":"regions_unexplored:baobab_branch","properties":{"facing":"west"}},
+    "h": {"block":"regions_unexplored:baobab_branch","properties":{"facing":"south"}},
+    "i": {"block":"regions_unexplored:baobab_log","properties":{"axis":"x"}}
+  },
+  "shape": [
+    [
+      "         ",
+      "  aca    ",
+      "         ",
+      "         ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "  ac     ",
+      " aceca   ",
+      "         ",
+      "         ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "  ccc    ",
+      " cfbhcca ",
+      "   b     ",
+      "   i     ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "   a ac  ",
+      " acccceca",
+      "         ",
+      "   i     ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "  c  ccc ",
+      "aceccfbhc",
+      "    bdd  ",
+      "   bb    ",
+      "   bb    ",
+      "   bb    ",
+      "   bb    "
+    ],
+    [
+      " cca ac  ",
+      "cfbcccgca",
+      "  b      ",
+      "  dbb    ",
+      "   bb    ",
+      "   bb    ",
+      "   bb    "
+    ],
+    [
+      "  a ca   ",
+      "acccecca ",
+      "         ",
+      "    i    ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "   ccc   ",
+      " acfbhc  ",
+      "    b    ",
+      "    i    ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "    c    ",
+      "  acgca  ",
+      "         ",
+      "         ",
+      "         ",
+      "         ",
+      "         "
+    ],
+    [
+      "         ",
+      "   aca   ",
+      "         ",
+      "         ",
+      "         ",
+      "         ",
+      "         "
+    ]
+  ]
+}

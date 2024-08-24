@@ -1,0 +1,102 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/palm",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:palm_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:palm_log","properties":{"axis":"y"}},
+    "c": {"block":"regions_unexplored:palm_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:palm_beard","properties":{"facing":"south"}},
+    "e": {"block":"regions_unexplored:palm_beard","properties":{"facing":"east"}},
+    "f": {"block":"regions_unexplored:palm_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:palm_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"regions_unexplored:palm_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"regions_unexplored:palm_beard","properties":{"facing":"west"}},
+    "j": {"block":"regions_unexplored:palm_beard","properties":{"facing":"north"}}
+  },
+  "shape": [
+    [
+      "       ",
+      "   f   ",
+      "   g   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "   f   ",
+      "   c   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "   h   ",
+      "  hah  ",
+      "  aea  ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " f   f ",
+      "fch hcf",
+      "g aaa g",
+      "  jbd  ",
+      "   b   ",
+      "   b   ",
+      "  b    ",
+      "  b    ",
+      "  b    ",
+      " b     "
+    ],
+    [
+      "       ",
+      "   h   ",
+      "  hah  ",
+      "  aia  ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "   f   ",
+      "   c   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "   f   ",
+      "   g   ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

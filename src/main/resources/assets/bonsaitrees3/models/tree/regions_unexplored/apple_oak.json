@@ -1,0 +1,63 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/apple_oak",
+  "version": 3,
+  "ref": {
+    "a": {"block":"minecraft:oak_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"minecraft:oak_log","properties":{"axis":"y"}},
+    "c": {"block":"minecraft:oak_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"minecraft:oak_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"3","distance":"2","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"3","distance":"3","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"1","distance":"3","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"0","distance":"2","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"1","distance":"1","persistent":"false","waterlogged":"false"}},
+    "j": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"3","distance":"1","persistent":"false","waterlogged":"false"}},
+    "k": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"4","distance":"2","persistent":"false","waterlogged":"false"}},
+    "l": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"1","distance":"2","persistent":"false","waterlogged":"false"}},
+    "m": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"2","distance":"1","persistent":"false","waterlogged":"false"}},
+    "n": {"block":"regions_unexplored:apple_oak_leaves","properties":{"age":"4","distance":"3","persistent":"false","waterlogged":"false"}},
+    "o": {"block":"minecraft:oak_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      " dad ",
+      " fkd ",
+      "     ",
+      "     "
+    ],
+    [
+      "  k  ",
+      " aca ",
+      "nljad",
+      "decaf",
+      "     ",
+      "     "
+    ],
+    [
+      " aih ",
+      " cbc ",
+      "ajbck",
+      "lcbck",
+      "  b  ",
+      "  b  "
+    ],
+    [
+      "  a  ",
+      "  ca ",
+      "dhcad",
+      "daman",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      " gkdo",
+      " nad ",
+      "     ",
+      "     "
+    ]
+  ]
+}

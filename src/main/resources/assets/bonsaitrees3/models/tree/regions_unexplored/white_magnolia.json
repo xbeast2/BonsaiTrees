@@ -1,0 +1,94 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/white_magnolia",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:white_magnolia_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"z"}},
+    "h": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"y"}},
+    "i": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"x"}}
+  },
+  "shape": [
+    [
+      "            ",
+      "      febef ",
+      " febee      ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            "
+    ],
+    [
+      "       eb   ",
+      "   beeebdbef",
+      "febdbbbdc   ",
+      "   cd       ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            "
+    ],
+    [
+      "       bdbe ",
+      " ebdbbbdcdbe",
+      "ebdcdddcacd ",
+      " dcac       ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "      i     "
+    ],
+    [
+      "      bdcdb ",
+      " bdcdddcacdb",
+      "bdcacccahac ",
+      " cagaa hh   ",
+      "    gg h    ",
+      "      hh    ",
+      "      h     ",
+      "      h     ",
+      "      h     "
+    ],
+    [
+      "      ebdb  ",
+      "  bdbbbdcdbe",
+      "ebdcdddcac  ",
+      "  cacc      ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "       h    "
+    ],
+    [
+      "        be  ",
+      "  eb eebdbef",
+      "febdbbb cd  ",
+      "  dc        ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            "
+    ],
+    [
+      "            ",
+      "      febef ",
+      " febee      ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            ",
+      "            "
+    ]
+  ]
+}

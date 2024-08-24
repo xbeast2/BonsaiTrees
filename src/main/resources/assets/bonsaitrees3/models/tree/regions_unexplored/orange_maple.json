@@ -1,0 +1,72 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/orange_maple",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:maple_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:orange_maple_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:orange_maple_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:orange_maple_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:orange_maple_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:maple_branch","properties":{"facing":"north"}},
+    "g": {"block":"regions_unexplored:maple_branch","properties":{"facing":"south"}},
+    "h": {"block":"regions_unexplored:maple_branch","properties":{"facing":"west"}},
+    "i": {"block":"regions_unexplored:maple_branch","properties":{"facing":"east"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      " cbce",
+      " bdb ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "  b  ",
+      "  db ",
+      " bdb ",
+      "cbdbc",
+      "bdidb",
+      "  d  ",
+      "     ",
+      "     "
+    ],
+    [
+      "  b  ",
+      " bdb ",
+      " dad ",
+      "bdad ",
+      "bdadb",
+      "dfagd",
+      " dad ",
+      "  a  ",
+      "  a  "
+    ],
+    [
+      "     ",
+      " cb  ",
+      "  db ",
+      " bdb ",
+      "cbdbc",
+      "bdhdb",
+      "  d  ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      " cbc ",
+      "cbdb ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

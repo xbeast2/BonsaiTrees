@@ -1,0 +1,124 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/blue_magnolia",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"y"}},
+    "f": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:blue_magnolia_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"regions_unexplored:magnolia_log","properties":{"axis":"x"}}
+  },
+  "shape": [
+    [
+      "           ",
+      "           ",
+      "     fgdgf ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "       dg  ",
+      "    fgdcdgf",
+      "       ac  ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     gdcd  ",
+      "    gdcacdg",
+      "     caba  ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     dcacd ",
+      "    dcabacd",
+      "     abhba ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "      ccdg ",
+      "    dcaacdg",
+      "      bbac ",
+      "      h    ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      " fgdddcd   ",
+      "    dcacdgf",
+      "      ba   ",
+      "      h    ",
+      "           ",
+      "    e      "
+    ],
+    [
+      "  gd       ",
+      "fgdccdd    ",
+      "  ca ccdgf ",
+      "           ",
+      "           ",
+      "     e     ",
+      "     e     "
+    ],
+    [
+      "  dccd     ",
+      "gdcaacd    ",
+      "  abba     ",
+      "    e      ",
+      "    e      ",
+      "    e      ",
+      "     h     "
+    ],
+    [
+      " dcacd     ",
+      "dcabacd    ",
+      " abeba     ",
+      "   e       ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      " gdcd      ",
+      "gdcacdg    ",
+      " caba      ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "   dg      ",
+      "fgdcdgf    ",
+      "   ac      ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      " fgdgf     ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ]
+  ]
+}

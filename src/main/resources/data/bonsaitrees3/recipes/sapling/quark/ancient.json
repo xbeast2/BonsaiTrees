@@ -1,0 +1,44 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "compatibleSoilTags": [
+	"dirt",
+	"grass"
+  ],
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "quark" }],
+  "drops": [
+	{
+	  "chance": 0.05,
+	  "result": {
+		"item": "quark:ancient_sapling"
+	  },
+	  "rolls": 1
+	},
+	{
+	  "chance": 0.75,
+	  "result": {
+		"item": "quark:ancient_log"
+	  },
+	  "rolls": 1
+	},
+	{
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:stick"
+	  },
+	  "rolls": 3
+	},
+	{
+	  "chance": 0.2,
+	  "requiresSilkTouch": true,
+	  "result": {
+		"item": "quark:ancient_leaves"
+	  },
+	  "rolls": 2
+	}
+  ],
+  "sapling": [
+	{
+	  "item": "quark:ancient_sapling"
+	}
+  ]
+}

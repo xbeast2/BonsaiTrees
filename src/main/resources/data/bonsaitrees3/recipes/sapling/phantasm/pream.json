@@ -1,0 +1,42 @@
+{
+    "type": "bonsaitrees3:sapling",
+    "conditions": [{ "type": "forge:mod_loaded", "modid": "phantasm" }],
+    "sapling": {
+        "item": "phantasm:pream_sapling"
+    },
+    "drops": [
+        {
+            "rolls": 1,
+            "chance": 0.05,
+            "result": {
+                "item": "phantasm:pream_sapling"
+            }
+        },
+        {
+            "rolls": 1,
+            "chance": 0.75,
+            "result": {
+                "item": "phantasm:pream_log"
+            }
+        },
+        {
+            "rolls": 3,
+            "chance": 0.2,
+            "result": {
+                "item": "minecraft:stick"
+            }
+        },
+        {
+            "rolls": 2,
+            "chance": 0.15,
+            "result": {
+                "item": "phantasm:pream_leaves"
+            },
+            "requiresSilkTouch": true
+        }
+    ],
+    "compatibleSoilTags": [
+        "dirt",
+        "grass"
+    ]
+}

@@ -1,0 +1,85 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/willow",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:willow_log","properties":{"axis":"y"}},
+    "c": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"regions_unexplored:willow_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "       ",
+      "       ",
+      " egfged",
+      " egfge ",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  gfg  ",
+      " gfafg ",
+      "egfafge",
+      "egfafge",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " gfafg ",
+      " facaf ",
+      "gfacafg",
+      "gfacafg",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      " facaf ",
+      " acbca ",
+      "facbcaf",
+      "facbcaf",
+      "   b   ",
+      "   b   ",
+      "   b   ",
+      "   b   "
+    ],
+    [
+      " gfafg ",
+      " facaf ",
+      "gfacafg",
+      "gfacafg",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "  gfg  ",
+      " gfafg ",
+      "egfafge",
+      "egfafge",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ],
+    [
+      "       ",
+      "       ",
+      "degfged",
+      "degfged",
+      "       ",
+      "       ",
+      "       ",
+      "       "
+    ]
+  ]
+}

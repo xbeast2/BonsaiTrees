@@ -1,0 +1,72 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/maple",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:maple_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:maple_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:maple_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:maple_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:maple_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"regions_unexplored:maple_branch","properties":{"facing":"north"}},
+    "g": {"block":"regions_unexplored:maple_branch","properties":{"facing":"south"}},
+    "h": {"block":"regions_unexplored:maple_branch","properties":{"facing":"west"}},
+    "i": {"block":"regions_unexplored:maple_branch","properties":{"facing":"east"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "cdbdc",
+      " beb ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "  b  ",
+      " beb ",
+      " beb ",
+      "dbebd",
+      "beieb",
+      "  e  ",
+      "     ",
+      "     "
+    ],
+    [
+      "  b  ",
+      " beb ",
+      " eae ",
+      " eae ",
+      "beaeb",
+      "efage",
+      " eae ",
+      "  a  ",
+      "  a  "
+    ],
+    [
+      "     ",
+      "  b  ",
+      " beb ",
+      " beb ",
+      "dbebd",
+      "beheb",
+      "  e  ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      " dbd ",
+      " beb ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

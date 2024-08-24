@@ -1,0 +1,73 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/red_maple",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:maple_log","properties":{"axis":"y"}},
+    "b": {"block":"regions_unexplored:red_maple_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"regions_unexplored:red_maple_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:red_maple_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:maple_branch","properties":{"facing":"north"}},
+    "f": {"block":"regions_unexplored:maple_branch","properties":{"facing":"south"}},
+    "g": {"block":"minecraft:bee_nest","properties":{"facing":"east","honey_level":"0"}},
+    "h": {"block":"regions_unexplored:maple_branch","properties":{"facing":"west"}},
+    "i": {"block":"regions_unexplored:maple_branch","properties":{"facing":"east"}},
+    "j": {"block":"regions_unexplored:red_maple_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      " bdb ",
+      " dcd ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "  db ",
+      " dc  ",
+      " dcd ",
+      "bdcdb",
+      "dcicd",
+      "  g  ",
+      "     ",
+      "     "
+    ],
+    [
+      "  d  ",
+      " dcd ",
+      " cac ",
+      " cac ",
+      "dcacd",
+      "ceafc",
+      " cac ",
+      "  a  ",
+      "  a  "
+    ],
+    [
+      "     ",
+      "  db ",
+      " dc  ",
+      " dcd ",
+      "bdcdb",
+      "dchcd",
+      "  c  ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "     ",
+      "     ",
+      "jbdb ",
+      " dcd ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "type": "bonsaitrees3:sapling/minecraft/cherry",
+  "version": 3,
+  "ref": {
+	"a": {"block":"minecraft:cherry_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+	"b": {"block":"minecraft:cherry_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+	"c": {"block":"minecraft:cherry_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+	"d": {"block":"minecraft:cherry_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+	"e": {"block":"minecraft:cherry_log","properties":{"axis":"z"}},
+	"f": {"block":"minecraft:cherry_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+	"g": {"block":"minecraft:cherry_log","properties":{"axis":"y"}},
+	"h": {"block":"minecraft:cherry_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+	[
+	  "        ",
+	  "        ",
+	  " hfcc   ",
+	  "    aa  ",
+	  "    cc  ",
+	  "    f   ",
+	  "        ",
+	  "        ",
+	  "        "
+	],
+	[
+	  "        ",
+	  " hfccc  ",
+	  "hfcaaac ",
+	  " caddda ",
+	  "  caa   ",
+	  "        ",
+	  "        ",
+	  "        ",
+	  "        "
+	],
+	[
+	  "  fcc   ",
+	  " fcaaa  ",
+	  "fcaddda ",
+	  "cadbbb  ",
+	  " caddb  ",
+	  "        ",
+	  "        ",
+	  "        ",
+	  "        "
+	],
+	[
+	  "  caa   ",
+	  " caddd  ",
+	  "cadbbbd ",
+	  "adbeegb ",
+	  " adbbg  ",
+	  "     eg ",
+	  "      eg",
+	  "       g",
+	  "       g"
+	],
+	[
+	  "  fcc   ",
+	  " fcaaa  ",
+	  "fcaddda ",
+	  " adbbbd ",
+	  " caddb  ",
+	  "        ",
+	  "        ",
+	  "        ",
+	  "        "
+	],
+	[
+	  "        ",
+	  " hfcc   ",
+	  " fcaaac ",
+	  "fcaddda ",
+	  " fcaad  ",
+	  "        ",
+	  "        ",
+	  "        ",
+	  "        "
+	],
+	[
+	  "        ",
+	  "        ",
+	  " hfccc  ",
+	  "  c  a  ",
+	  "     a  ",
+	  "        ",
+	  "        ",
+	  "        ",
+	  "        "
+	]
+  ]
+}

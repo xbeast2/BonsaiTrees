@@ -1,0 +1,138 @@
+{
+  "type": "bonsaitrees3:sapling/phantasm/pream",
+  "version": 3,
+  "ref": {
+    "a": {"block":"phantasm:pream_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"phantasm:pream_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"phantasm:pream_leaves","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"phantasm:pream_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"phantasm:hanging_pream_leaves","properties":{"has_fruit":"false"}},
+    "f": {"block":"phantasm:pream_leaves","properties":{"distance":"6","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"phantasm:pream_leaves","properties":{"distance":"7","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"phantasm:pream_log","properties":{"axis":"y"}},
+    "i": {"block":"phantasm:pream_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "           ",
+      "           ",
+      "           ",
+      "     c     ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "     a     ",
+      "  gfcacfg  ",
+      "     a  e  ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     b     ",
+      "   cabac   ",
+      " gfcabacfg ",
+      "   cabac   ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "     b     ",
+      "   abdba   ",
+      "  cabdbac  ",
+      " fcabdbacf ",
+      "  cabdbac  ",
+      "        e  ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "    bdb    ",
+      "   bdidb   ",
+      "  abdidba  ",
+      " cabdidbac ",
+      "  abdidba  ",
+      "     e     ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "   bdidb   ",
+      "  bdihidb  ",
+      " abdihidba ",
+      "cabdihidbac",
+      "eabdihidbae",
+      "  e  h  e  ",
+      "     h     ",
+      "     h     ",
+      "     h     "
+    ],
+    [
+      "    bdb    ",
+      "   bdidb   ",
+      "  abdidba  ",
+      " cabdidbac ",
+      "  abdidba  ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "     b     ",
+      "   abdba   ",
+      "  cabdbac  ",
+      " fcabdbacf ",
+      " ecabdbac  ",
+      "      e    ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "     b     ",
+      "   cabac   ",
+      " gfcabacfg ",
+      "   cabac   ",
+      "   e       ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "     a     ",
+      "   fcacfg  ",
+      "     a     ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ],
+    [
+      "           ",
+      "           ",
+      "           ",
+      "     c     ",
+      "           ",
+      "           ",
+      "           ",
+      "           ",
+      "           "
+    ]
+  ]
+}

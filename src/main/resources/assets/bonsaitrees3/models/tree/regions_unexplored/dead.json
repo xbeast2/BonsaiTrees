@@ -1,0 +1,53 @@
+{
+  "type": "bonsaitrees3:sapling/regions_unexplored/dead",
+  "version": 3,
+  "ref": {
+    "a": {"block":"regions_unexplored:dead_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"regions_unexplored:dead_log","properties":{"axis":"y"}},
+    "c": {"block":"regions_unexplored:dead_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"regions_unexplored:dead_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "e": {"block":"regions_unexplored:dead_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+    [
+      "     ",
+      "     ",
+      "edade",
+      " dade",
+      "     ",
+      "     "
+    ],
+    [
+      "  a  ",
+      " ac  ",
+      "dacad",
+      "dacad",
+      "     ",
+      "     "
+    ],
+    [
+      " aca ",
+      " cbc ",
+      "acbca",
+      "acbca",
+      "  b  ",
+      "  b  "
+    ],
+    [
+      "  a  ",
+      "  ca ",
+      "dacad",
+      "dacad",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      "     ",
+      "edad ",
+      " dad ",
+      "     ",
+      "     "
+    ]
+  ]
+}
