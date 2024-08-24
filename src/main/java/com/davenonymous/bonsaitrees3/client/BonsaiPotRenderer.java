@@ -2,7 +2,9 @@ package com.davenonymous.bonsaitrees3.client;
 
 import com.davenonymous.bonsaitrees3.blocks.BonsaiPotBlockEntity;
 import com.davenonymous.bonsaitrees3.config.ClientConfig;
-import com.davenonymous.libnonymous.render.MultiModelBlockRenderer;
+import com.davenonymous.libnonymous.render.MultiBlockBlockAndTintGetter;
+import com.davenonymous.libnonymous.render.MultiBlockBlockColors;
+import com.davenonymous.libnonymous.render.MultiblockBakedModel;
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
@@ -14,9 +16,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.data.ModelData;
-import org.joml.*;
-
-import java.lang.Math;
+import org.joml.AxisAngle4f;
+import org.joml.Quaternionf;
 
 public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEntity> {
 	public static final ResourceLocation WATER = new ResourceLocation("minecraft", "block/water_still");
@@ -61,9 +62,9 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 		float progress = (float) pPotBlock.getProgress(pPartialTick);
 		poseStack.scale(progress, progress, progress);
 
-		var rendertype = RenderType.translucent();
+		var rendertype = RenderType.solid();
 		var mc = Minecraft.getInstance();
-		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FABULOUS.getId()) {
+		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FANCY.getId()) {
 			rendertype = RenderType.cutout();
 		}
 
@@ -86,7 +87,16 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 			poseStack.translate(-translateOffsetX, -translateOffsetY, -translateOffsetZ);
 
 			var buffer = pBufferSource.getBuffer(rendertype);
-			MultiModelBlockRenderer.renderMultiBlockModel(multiBlock, pPotBlock.getLevel(), pPotBlock.getBlockState(), pPotBlock.getBlockPos(), buffer, poseStack, pPackedLight);
+			var baked = MultiblockBakedModel.of(multiBlock);
+
+			MultiBlockBlockAndTintGetter fakeLevel = new MultiBlockBlockAndTintGetter(multiBlock, pPotBlock.getLevel(), pPotBlock.getBlockPos());
+			var mr = new TreeModelRenderer(new MultiBlockBlockColors(multiBlock));
+
+			if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FABULOUS.getId()) {
+				mr.tesselateWithAO(fakeLevel, baked, pPotBlock.getBlockState(), pPotBlock.getBlockPos(), poseStack, buffer, true, pPotBlock.getLevel().random, 0, pPackedLight, ModelData.EMPTY, rendertype);
+			} else {
+				mr.tesselateWithoutAO(fakeLevel, baked, pPotBlock.getBlockState(), pPotBlock.getBlockPos(), poseStack, buffer, true, pPotBlock.getLevel().random, 0, pPackedLight, ModelData.EMPTY, rendertype);
+			}
 		}
 
 		poseStack.popPose();
