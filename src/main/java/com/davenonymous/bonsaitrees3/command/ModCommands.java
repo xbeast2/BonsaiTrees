@@ -13,7 +13,6 @@ public class ModCommands {
 		dispatcher.register(
 				Commands.literal("bonsai")
 						.then(CommandTreeCreator.register(dispatcher))
-						.then(CommandTreeGenerator.register(dispatcher, pContext))
 						.then(Commands.literal("list")
 								.then(CommandListSoils.register(dispatcher))
 								.then(CommandListSaplings.register(dispatcher))
