@@ -1,0 +1,47 @@
+{
+  "type": "bonsaitrees3:sapling/thermal/rubberwood",
+  "version": 3,
+  "ref": {
+    "a": {"block":"thermal:rubberwood_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"thermal:rubberwood_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+    "c": {"block":"thermal:rubberwood_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"thermal:rubberwood_log","properties":{"axis":"y"}}
+  },
+  "shape": [
+    [
+      "     ",
+      " aca ",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      " aca ",
+      "acbca",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      " cbc ",
+      "cbdbc",
+      "  d  ",
+      "  d  ",
+      "  d  "
+    ],
+    [
+      " aca ",
+      "acbca",
+      "     ",
+      "     ",
+      "     "
+    ],
+    [
+      "     ",
+      " aca ",
+      "     ",
+      "     ",
+      "     "
+    ]
+  ]
+}

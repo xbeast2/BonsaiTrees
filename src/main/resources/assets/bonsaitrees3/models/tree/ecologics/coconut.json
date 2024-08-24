@@ -1,0 +1,105 @@
+{
+  "type": "bonsaitrees3:sapling/ecologics/coconut",
+  "version": 3,
+  "ref": {
+    "a": {"block":"ecologics:coconut_leaves","properties":{"distance":"7","distance_9":"8","persistent":"false","waterlogged":"false"}},
+    "b": {"block":"ecologics:hanging_coconut","properties":{"age":"0"}},
+    "c": {"block":"ecologics:coconut_leaves","properties":{"distance":"5","distance_9":"5","persistent":"false","waterlogged":"false"}},
+    "d": {"block":"ecologics:coconut_log","properties":{"axis":"y"}},
+    "e": {"block":"ecologics:coconut_leaves","properties":{"distance":"7","distance_9":"7","persistent":"false","waterlogged":"false"}},
+    "f": {"block":"ecologics:coconut_leaves","properties":{"distance":"3","distance_9":"3","persistent":"false","waterlogged":"false"}},
+    "g": {"block":"ecologics:coconut_leaves","properties":{"distance":"6","distance_9":"6","persistent":"false","waterlogged":"false"}},
+    "h": {"block":"ecologics:coconut_leaves","properties":{"distance":"2","distance_9":"2","persistent":"false","waterlogged":"false"}},
+    "i": {"block":"ecologics:coconut_leaves","properties":{"distance":"4","distance_9":"4","persistent":"false","waterlogged":"false"}},
+    "j": {"block":"ecologics:hanging_coconut","properties":{"age":"1"}},
+    "k": {"block":"ecologics:coconut_log","properties":{"axis":"z"}},
+    "l": {"block":"ecologics:coconut_leaves","properties":{"distance":"1","distance_9":"1","persistent":"false","waterlogged":"false"}},
+    "m": {"block":"ecologics:hanging_coconut","properties":{"age":"2"}}
+  },
+  "shape": [
+    [
+      "        ",
+      "   c    ",
+      "   g    ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        "
+    ],
+    [
+      "   f    ",
+      " gcicg  ",
+      " e   e  ",
+      " a   a  ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        "
+    ],
+    [
+      "  fhf   ",
+      " c  bc  ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        "
+    ],
+    [
+      " fhlhf  ",
+      "ci dmic ",
+      "g  d  g ",
+      "    d   ",
+      "    d   ",
+      "     d  ",
+      "     d  ",
+      "      d ",
+      "      d ",
+      "      dk"
+    ],
+    [
+      "  fhf   ",
+      " cjj c  ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "      d "
+    ],
+    [
+      "   f    ",
+      " gcicg  ",
+      " e   e  ",
+      " a   a  ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        "
+    ],
+    [
+      "        ",
+      "   c    ",
+      "   g    ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        ",
+      "        "
+    ]
+  ]
+}

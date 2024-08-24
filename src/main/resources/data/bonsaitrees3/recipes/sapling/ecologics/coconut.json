@@ -1,22 +1,22 @@
 {
     "type": "bonsaitrees3:sapling",
-    "conditions": [{ "type": "forge:mod_loaded", "modid": "regions_unexplored" }],
+    "conditions": [{ "type": "forge:mod_loaded", "modid": "ecologics" }],
     "sapling": {
-        "item": "regions_unexplored:baobab_sapling"
+        "item": "ecologics:coconut_sapling"
     },
     "drops": [
         {
             "rolls": 1,
             "chance": 0.05,
             "result": {
-                "item": "regions_unexplored:baobab_sapling"
+                "item": "ecologics:coconut_sapling"
             }
         },
         {
             "rolls": 1,
             "chance": 0.75,
             "result": {
-                "item": "regions_unexplored:baobab_log"
+                "item": "ecologics:coconut_log"
             }
         },
         {
@@ -30,21 +30,22 @@
             "rolls": 2,
             "chance": 0.15,
             "result": {
-                "item": "regions_unexplored:baobab_leaves"
+                "item": "ecologics:coconut_leaves"
             },
             "requiresSilkTouch": true
         },
         {
-            "rolls": 2,
-            "chance": 0.05,
-            "result": {
-                "item": "regions_unexplored:baobab_branch"
-            },
-            "requiresSilkTouch": true
+          "rolls": 1,
+          "chance": 0.05,
+          "result": {
+            "item": "ecologics:coconut"
+          },
+          "requiresBees": true
         }
     ],
     "compatibleSoilTags": [
         "dirt",
-        "grass"
+        "grass",
+        "sand"
     ]
 }

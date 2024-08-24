@@ -33,10 +33,19 @@
                 "item": "regions_unexplored:palm_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 2,
+            "chance": 0.05,
+            "result": {
+                "item": "regions_unexplored:palm_beard"
+            },
+            "requiresSilkTouch": true
         }
     ],
     "compatibleSoilTags": [
         "dirt",
-        "grass"
+        "grass",
+        "sand"
     ]
 }

@@ -33,6 +33,14 @@
                 "item": "regions_unexplored:socotra_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 2,
+            "chance": 0.05,
+            "result": {
+                "item": "regions_unexplored:socotra_branch"
+            },
+            "requiresSilkTouch": true
         }
     ],
     "compatibleSoilTags": [

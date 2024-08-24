@@ -1,0 +1,44 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "compatibleSoilTags": [
+    "dirt",
+    "grass"
+  ],
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "thermal" }],
+  "drops": [
+    {
+      "chance": 0.05,
+      "result": {
+        "item": "thermal:rubberwood_sapling"
+      },
+      "rolls": 1
+    },
+    {
+      "chance": 0.75,
+      "result": {
+        "item": "thermal:rubberwood_log"
+      },
+      "rolls": 1
+    },
+    {
+      "chance": 0.2,
+      "result": {
+        "item": "minecraft:stick"
+      },
+      "rolls": 3
+    },
+    {
+      "chance": 0.2,
+      "requiresSilkTouch": true,
+      "result": {
+        "item": "thermal:rubberwood_leaves"
+      },
+      "rolls": 2
+    }
+  ],
+  "sapling": [
+    {
+      "item": "thermal:rubberwood_sapling"
+    }
+  ]
+}

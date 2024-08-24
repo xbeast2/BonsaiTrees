@@ -33,6 +33,14 @@
                 "item": "ecologics:walnut_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+          "rolls": 1,
+          "chance": 0.05,
+          "result": {
+            "item": "ecologics:walnut"
+          },
+          "requiresBees": true
         }
     ],
     "compatibleSoilTags": [

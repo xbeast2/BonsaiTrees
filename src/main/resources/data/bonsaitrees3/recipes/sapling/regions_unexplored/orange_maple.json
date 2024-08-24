@@ -33,6 +33,14 @@
                 "item": "regions_unexplored:orange_maple_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 2,
+            "chance": 0.05,
+            "result": {
+                "item": "regions_unexplored:maple_branch"
+            },
+            "requiresSilkTouch": true
         }
     ],
     "compatibleSoilTags": [

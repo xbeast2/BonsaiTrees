@@ -33,6 +33,14 @@
                 "item": "regions_unexplored:redwood_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 2,
+            "chance": 0.05,
+            "result": {
+                "item": "regions_unexplored:redwood_branch"
+            },
+            "requiresSilkTouch": true
         }
     ],
     "compatibleSoilTags": [

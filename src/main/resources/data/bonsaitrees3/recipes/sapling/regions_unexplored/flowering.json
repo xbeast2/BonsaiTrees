@@ -33,6 +33,14 @@
                 "item": "minecraft:oak_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 2,
+            "chance": 0.05,
+            "result": {
+                "item": "regions_unexplored:oak_branch"
+            },
+            "requiresSilkTouch": true
         }
     ],
     "compatibleSoilTags": [

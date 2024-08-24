@@ -14,13 +14,13 @@
         },
         {
             "rolls": 1,
-            "chance": 0.75,
+            "chance": 0.60,
             "result": {
                 "item": "regions_unexplored:small_oak_log"
             }
         },
         {
-            "rolls": 3,
+            "rolls": 5,
             "chance": 0.2,
             "result": {
                 "item": "minecraft:stick"

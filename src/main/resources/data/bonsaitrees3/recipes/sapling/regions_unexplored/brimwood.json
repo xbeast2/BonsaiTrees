@@ -20,6 +20,14 @@
             }
         },
         {
+            "rolls": 1,
+            "chance": 0.15,
+            "result": {
+                "item": "regions_unexplored:brimwood_log_magma"
+            },
+            "requiresSilkTouch": true
+        },
+        {
             "rolls": 3,
             "chance": 0.2,
             "result": {
@@ -33,10 +41,19 @@
                 "item": "regions_unexplored:brimwood_leaves"
             },
             "requiresSilkTouch": true
+        },
+        {
+            "rolls": 1,
+            "chance": 0.05,
+            "result": {
+                "item": "minecraft:magma_cream"
+            },
+            "requiresBees": true
         }
     ],
     "compatibleSoilTags": [
         "dirt",
-        "grass"
+        "grass",
+        "lava"
     ]
 }
