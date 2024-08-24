@@ -102,7 +102,7 @@ public class CommonConfig {
 
 		minimumRequiredTicks = COMMON_BUILDER
 				.comment("Minimum amount of ticks for a bonsai to fully grow")
-				.defineInRange("minimumRequiredTicks", 1, 1, Integer.MAX_VALUE);
+				.defineInRange("minimumRequiredTicks", 10, 1, Integer.MAX_VALUE);
 
 		maximumExtractedEnergyPerTick = COMMON_BUILDER
 				.comment("Maximum extracted Forge Energy from upgrade items per tick")

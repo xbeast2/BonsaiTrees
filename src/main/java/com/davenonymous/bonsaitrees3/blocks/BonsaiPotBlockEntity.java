@@ -84,7 +84,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 
 	private int hoppingCooldown = 0;
 	private int cuttingCooldown = 0;
-	
+
 	private boolean canSaplingGrow = false;
 
 	public static final ModelProperty<BlockState> SOIL_BLOCK = new ModelProperty<>();
@@ -98,10 +98,10 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 	@Override
 	protected void initialize() {
 		super.initialize();
-		
+
 		if (getLevel() == null)
 			return;
-		
+
 		this.updateSaplingInfo();	// ADDED
 		this.updateSoilBlock();		// ADDED
 		this.updateModules();		// ADDED
@@ -316,7 +316,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 					}
 				}
 			}
-			
+
 			if (stack.isEnchanted() || stack.getItem() instanceof EnchantedBookItem) {
 				var enchantmentHelper = new EnchantmentHelper(stack);
 				if (CommonConfig.enableFortuneUpgrade.get()) {
@@ -340,17 +340,15 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 
 
 	protected void updateInfoObjects() {
-		//updateSaplingInfo();		MOVED
-		//updateSoilBlock();		MOVED
-		//updateModules();			MOVED
 
 		if(this.soilInfo != null && this.saplingInfo != null) {
 			int ticks = this.saplingInfo.getRequiredTicks();
 			float soilModifier = this.soilInfo.getTickModifier();
 
 			this.requiredTicks = (int) Math.ceil(ticks * soilModifier);
-			if(efficiency > 0) {
-				this.requiredTicks -= Math.floor(ticks * 0.05f * efficiency);
+			if(this.efficiency > 0) {
+				var multiplier = Math.min(this.efficiency, 15) * 0.01f;
+				this.requiredTicks -= Math.ceil(this.requiredTicks * multiplier);
 			}
 
 			if(this.requiredTicks < CommonConfig.minimumRequiredTicks.get()) {
@@ -393,11 +391,11 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 
 		List<ItemStack> upgradeItems = InventoryHelper.getStacks(this.getUpgradeItemStacks());
 		List<ItemStack> drops = this.saplingInfo.getRandomizedDrops(this.level.random, fortune, hasSilkTouch, hasBeeHive, upgradeItems);
-		
+
 		IItemHandler belowHandler = null;
 		boolean changed = false;
 		boolean canHop = hopping && (belowHandler = getNeighborInventory(Direction.DOWN)) != null;
-		
+
 		for (int i = 0; i < drops.size(); i++) {
 			ItemStack drop = drops.get(i);
 			ItemStack insertedStack = drop;
@@ -414,11 +412,11 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 				if (!simulatedStack.equals(insertedStack, false))
 					insertedStack = ItemHandlerHelper.insertItemStacked(belowHandler, insertedStack, false).copy();
 			}
-			
+
 			// Set changed if any drop fit
 			changed = changed || !insertedStack.equals(drop, false);
 		}
-		
+
 		// If axes should take damage && this was an autocut && the tree was cut
 		// Get axe with remaining durability
 		if(changed && isAutoCut && CommonConfig.autoCuttingDamagesItems.get()) {
@@ -436,7 +434,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 				}
 			}
 		}
-		
+
 		// If something changed, update
 		if (changed) {
 			this.setGrowTicks(0);
@@ -444,7 +442,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			this.setChanged();
 			this.notifyClients();
 		}
-		
+
 		// Start growing again if any of the drop stacks fit
 		return changed;
 	}
@@ -479,9 +477,9 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			return;
 		}
 
-		/* 
+		/*
 		 * THIS IS MOVED INTO "updateSaplingInfo" AND "updateSoilBlock"
-		
+
 		if(SoilCompatibility.INSTANCE.isReady && !SoilCompatibility.INSTANCE.canTreeGrowOnSoil(this.saplingInfo, this.soilInfo)) {
 			this.setGrowTicks(0);
 			return;
@@ -522,17 +520,18 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 
 	public void setGrowTicks(int growTicks) {
 		int maxTicks = this.requiredTicks * 1000;
-		
+
 		if(growTicks > maxTicks)
 			growTicks = maxTicks;
-		
+
 		if(growTicks != this.growTicks) {
 			this.growTicks = growTicks;
-			
+
 			// Call "setChanged" only if grow state is either nothing or full to save server tick time
-			if (this.growTicks == 0 || this.growTicks == maxTicks)
+			if (this.growTicks == 0 || this.growTicks == maxTicks) {
 				this.setChanged();
-			
+			}
+
 			//this.setChanged();		DISABLED TO SAVE TICKS, ENABLE IF THERE'S SYNCHRONIZATION PROBLEMS
 		}
 	}
@@ -559,7 +558,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			this.updateSoilBlock();		// ADDED
 			this.updateModules();		// ADDED
 			this.updateInfoObjects();
-			
+
 			if(this.level.isClientSide) {
 				requestModelDataUpdate();
 			}
