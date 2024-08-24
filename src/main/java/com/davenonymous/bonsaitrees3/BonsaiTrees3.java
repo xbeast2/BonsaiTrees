@@ -31,6 +31,7 @@ public class BonsaiTrees3 {
 
 		IEventBus modbus = FMLJavaModLoadingContext.get().getModEventBus();
 		modbus.addListener(ModSetup::init);
+		modbus.addListener(ModSetup::buildContents);
 
 		DistExecutor.unsafeRunWhenOn(Dist.CLIENT, () -> () -> modbus.addListener(ClientSetup::init));
 	}

@@ -92,7 +92,7 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 			MultiBlockBlockAndTintGetter fakeLevel = new MultiBlockBlockAndTintGetter(multiBlock, pPotBlock.getLevel(), pPotBlock.getBlockPos());
 			var mr = new TreeModelRenderer(new MultiBlockBlockColors(multiBlock));
 
-			if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FABULOUS.getId()) {
+			if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FANCY.getId()) {
 				mr.tesselateWithAO(fakeLevel, baked, pPotBlock.getBlockState(), pPotBlock.getBlockPos(), poseStack, buffer, true, pPotBlock.getLevel().random, 0, pPackedLight, ModelData.EMPTY, rendertype);
 			} else {
 				mr.tesselateWithoutAO(fakeLevel, baked, pPotBlock.getBlockState(), pPotBlock.getBlockPos(), poseStack, buffer, true, pPotBlock.getLevel().random, 0, pPackedLight, ModelData.EMPTY, rendertype);

@@ -133,10 +133,10 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 
 		var baked = MultiblockBakedModel.of(model);
 
-		MultiBlockBlockAndTintGetter fakeLevel = new MultiBlockBlockAndTintGetter(model, mc.level, mc.player.blockPosition().above(300));
+		MultiBlockBlockAndTintGetter fakeLevel = new MultiBlockBlockAndTintGetter(model, mc.level, BlockPos.ZERO);
 		var mr = new TreeModelRenderer(new MultiBlockBlockColors(model));
 
-		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FABULOUS.getId()) {
+		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FANCY.getId()) {
 			mr.tesselateWithAO(fakeLevel, baked, Blocks.ACACIA_LEAVES.defaultBlockState(), BlockPos.ZERO, guiGraphics.pose(), buffer, true, mc.level.random, 0, 15, ModelData.EMPTY, RenderType.cutout());
 		} else {
 			mr.tesselateWithoutAO(fakeLevel, baked, Blocks.ACACIA_LEAVES.defaultBlockState(), BlockPos.ZERO, guiGraphics.pose(), buffer, true, mc.level.random, 0, 192, ModelData.EMPTY, RenderType.cutout());

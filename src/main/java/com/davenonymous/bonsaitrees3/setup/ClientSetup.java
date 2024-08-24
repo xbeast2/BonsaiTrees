@@ -17,11 +17,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 public class ClientSetup {
 	public static void init(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-            /*
-            MenuScreens.register(Registration.POWERGEN_CONTAINER.get(), PowergenScreen::new);
-            ItemBlockRenderTypes.setRenderLayer(Registration.POWERGEN.get(), RenderType.translucent());
-            PowergenRenderer.register();
-             */
 			MenuScreens.register(Registration.BONSAI_POT_CONTAINER.get(), BonsaiPotScreen::new);
 			TreeModels.init();
 			BlockEntityRenderers.register(Registration.BONSAI_POT_BLOCKENTITY.get(), BonsaiPotRenderer::new);
