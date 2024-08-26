@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[43,)"
+loaderVersion="[47,)"
 
 license="MIT"
 issueTrackerURL="https://github.com/thraaawn/BonsaiTrees/issues"
@@ -18,14 +18,14 @@ Grow Trees in small pots like Mr. Miyagi!
 [[dependencies.bonsaitrees3]]
     modId="forge"
     mandatory=true
-    versionRange="[43,)"
+    versionRange="[47,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.bonsaitrees3]]
     modId="libnonymous"
     mandatory=true
-    versionRange="[2.2,)"
+    versionRange="[2.3,)"
     ordering="NONE"
     side="BOTH"
 
