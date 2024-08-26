@@ -33,6 +33,8 @@ public class CommonConfig {
 
 	public static ForgeConfigSpec.IntValue minimumRequiredTicks;
 
+	public static ForgeConfigSpec.DoubleValue requiredTicksModifier;
+
 	public static ForgeConfigSpec.IntValue maximumExtractedEnergyPerTick;
 	public static ForgeConfigSpec.DoubleValue extraGrowthRatioPerFE;
 
@@ -104,13 +106,17 @@ public class CommonConfig {
 				.comment("Minimum amount of ticks for a bonsai to fully grow")
 				.defineInRange("minimumRequiredTicks", 10, 1, Integer.MAX_VALUE);
 
+		requiredTicksModifier = COMMON_BUILDER
+				.comment("Can be changed to affect the growth time of all trees by a multiplier")
+				.defineInRange("requiredTicksModifier", 1.0d, 0.0d, Integer.MAX_VALUE);
+
 		maximumExtractedEnergyPerTick = COMMON_BUILDER
 				.comment("Maximum extracted Forge Energy from upgrade items per tick")
 				.defineInRange("maximumExtractedEnergyPerTick", 60, 0, Integer.MAX_VALUE);
 
 		extraGrowthRatioPerFE = COMMON_BUILDER
 				.comment("How much faster a tree grows per extracted Forge Energy. (Example: 1.0 + 60fe/t * 0.005 = 1.3x faster)")
-				.defineInRange("extraGrowthRatioPerFE", 0.005, 0.0, Double.MAX_VALUE);
+				.defineInRange("extraGrowthRatioPerFE", 0.005d, 0.0, Double.MAX_VALUE);
 
 		COMMON_CONFIG = COMMON_BUILDER.build();
 

@@ -345,7 +345,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			int ticks = this.saplingInfo.getRequiredTicks();
 			float soilModifier = this.soilInfo.getTickModifier();
 
-			this.requiredTicks = (int) Math.ceil(ticks * soilModifier);
+			this.requiredTicks = (int) Math.ceil(ticks * soilModifier * CommonConfig.requiredTicksModifier.get());
 			if(this.efficiency > 0) {
 				var multiplier = Math.min(this.efficiency, 15) * 0.01f;
 				this.requiredTicks -= Math.ceil(this.requiredTicks * multiplier);
