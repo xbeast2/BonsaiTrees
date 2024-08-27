@@ -1,0 +1,52 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "compatibleSoilTags": [
+	"dirt",
+	"grass",
+	"mud",
+	"water"
+  ],
+  "drops": [
+	{
+	  "chance": 0.05,
+	  "result": {
+		"item": "minecraft:mangrove_propagule"
+	  },
+	  "rolls": 1
+	},
+	{
+	  "chance": 0.75,
+	  "result": {
+		"item": "minecraft:mangrove_log"
+	  },
+	  "rolls": 1
+	},
+	{
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:mangrove_roots"
+	  },
+	  "rolls": 2
+	},
+	{
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:stick"
+	  },
+	  "rolls": 3
+	},
+	{
+	  "chance": 0.2,
+	  "requiresSilkTouch": true,
+	  "result": {
+		"item": "minecraft:mangrove_leaves"
+	  },
+	  "rolls": 2
+	}
+  ],
+  "sapling": [
+	{
+	  "item": "minecraft:mangrove_propagule"
+	}
+  ]
+}
