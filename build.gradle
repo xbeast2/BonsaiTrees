@@ -123,7 +123,10 @@ dependencies {
 	implementation fg.deobf("curse.maven:jade-324717:${jade_fileid}-api-sources")
 
 
-	// Runtime Only
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
+
+    // Runtime Only
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
 	// Just Enough Items
 	runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")

@@ -1,0 +1,12 @@
+{
+  "type": "patchouli:shapeless_book_recipe",
+  "ingredients": [
+	{
+	  "tag": "minecraft:saplings"
+	},
+	{
+	  "item": "minecraft:book"
+	}
+  ],
+  "book": "bonsaitrees3:book_of_trees"
+}

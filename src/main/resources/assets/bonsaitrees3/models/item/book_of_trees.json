@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+	"layer0": "bonsaitrees3:item/book_of_trees"
+  }
+}

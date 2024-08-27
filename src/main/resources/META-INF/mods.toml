@@ -2,17 +2,20 @@ modLoader="javafml"
 loaderVersion="[47,)"
 
 license="MIT"
-issueTrackerURL="https://github.com/thraaawn/BonsaiTrees/issues"
+issueTrackerURL="https://github.com/davenonymous/BonsaiTrees/issues"
 
 [[mods]]
 modId="bonsaitrees3"
 version="${file.jarVersion}"
 displayName="Bonsai Trees 3"
-displayURL="https://github.com/thraaawn/BonsaiTrees"
+displayURL="https://github.com/davenonymous/BonsaiTrees"
 logoFile="bonsaitrees_logo.png"
 authors="Davenonymous"
 description='''
 Grow Trees in small pots like Mr. Miyagi!
+
+Some image assets have various Creative Commons license.
+You can find a full list in the included licenses.md file in the jar archive.
 '''
 
 [[dependencies.bonsaitrees3]]
