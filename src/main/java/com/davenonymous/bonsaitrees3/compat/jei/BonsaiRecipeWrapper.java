@@ -4,18 +4,15 @@ package com.davenonymous.bonsaitrees3.compat.jei;
 import com.davenonymous.bonsaitrees3.client.TreeModelRenderer;
 import com.davenonymous.bonsaitrees3.client.TreeModels;
 import com.davenonymous.bonsaitrees3.config.CommonConfig;
-import com.davenonymous.libnonymous.render.MultiBlockBlockAndTintGetter;
-import com.davenonymous.libnonymous.render.MultiBlockBlockColors;
-import com.davenonymous.libnonymous.render.MultiModelBlockRenderer;
-import com.davenonymous.libnonymous.render.MultiblockBakedModel;
-import com.davenonymous.libnonymous.utils.TickTimeHelper;
 import com.davenonymous.bonsaitrees3.registry.SoilCompatibility;
 import com.davenonymous.bonsaitrees3.registry.sapling.SaplingDrop;
 import com.davenonymous.bonsaitrees3.registry.sapling.SaplingInfo;
 import com.davenonymous.bonsaitrees3.registry.soil.SoilInfo;
-import com.mojang.blaze3d.vertex.PoseStack;
+import com.davenonymous.libnonymous.render.MultiBlockBlockAndTintGetter;
+import com.davenonymous.libnonymous.render.MultiBlockBlockColors;
+import com.davenonymous.libnonymous.render.MultiblockBakedModel;
+import com.davenonymous.libnonymous.utils.TickTimeHelper;
 import com.mojang.blaze3d.vertex.Tesselator;
-
 import mezz.jei.api.gui.ITickTimer;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.drawable.IDrawableStatic;
@@ -29,7 +26,6 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.client.GraphicsStatus;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
@@ -39,7 +35,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.data.ModelData;
 import net.minecraftforge.registries.ForgeRegistries;
-
 import org.joml.AxisAngle4f;
 import org.joml.Quaternionf;
 import org.lwjgl.opengl.GL11;
@@ -129,8 +124,6 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 		GL11.glFrontFace(GL11.GL_CW);
 
 		var mc = Minecraft.getInstance();
-		MultiModelBlockRenderer.renderMultiBlockModel(model, mc.level, buffer, guiGraphics.pose(), LightTexture.FULL_BLOCK);
-
 		var baked = MultiblockBakedModel.of(model);
 
 		MultiBlockBlockAndTintGetter fakeLevel = new MultiBlockBlockAndTintGetter(model, mc.level, BlockPos.ZERO);
