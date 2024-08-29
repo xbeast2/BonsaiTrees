@@ -72,15 +72,22 @@ public class BonsaiRecipeWrapper implements IRecipeSlotTooltipCallback {
 
 		slotDrops = new HashMap<String, SaplingDrop>();
 
+		int targetSlot = 0;
 		for (int slot = 0; slot < sapling.drops.size(); slot++) {
 			SaplingDrop drop = sapling.drops.get(slot);
+			if(drop.requiresBees && !CommonConfig.enablePollinatingUpgrade.get()) {
+				continue;
+			}
+
 			ItemStack dropStack = drop.resultStack.copy();
 			dropStack.setCount(drop.rolls);
-			slotDrops.put("output_" + slot, drop);
+			slotDrops.put("output_" + targetSlot, drop);
 
-			builder.addSlot(RecipeIngredientRole.OUTPUT, 81 + 19 * (slot % 4), 1 + 19 * (slot / 4))
-				.setSlotName("output_" + slot).addTooltipCallback(this)
+			builder.addSlot(RecipeIngredientRole.OUTPUT, 81 + 19 * (targetSlot % 4), 1 + 19 * (targetSlot / 4))
+				.setSlotName("output_" + targetSlot).addTooltipCallback(this)
 				.addItemStack(dropStack);
+
+			targetSlot++;
 		}
     }
 

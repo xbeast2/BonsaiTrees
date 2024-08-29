@@ -293,7 +293,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			}
 
 			if(stack.is(Registration.TAG_UPGRADES_POLLINATING)) {
-				hasBeeHive = true;
+				hasBeeHive = CommonConfig.enablePollinatingUpgrade.get();
 			}
 
 			if(stack.is(Registration.TAG_UPGRADES_HOPPING)) {
@@ -587,7 +587,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 			return true;
 		}
 
-		if(stack.is(Registration.TAG_UPGRADES_POLLINATING)) {
+		if(CommonConfig.enablePollinatingUpgrade.get() && stack.is(Registration.TAG_UPGRADES_POLLINATING)) {
 			return true;
 		}
 

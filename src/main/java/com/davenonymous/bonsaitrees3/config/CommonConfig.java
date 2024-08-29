@@ -18,6 +18,7 @@ public class CommonConfig {
 	public static ForgeConfigSpec.BooleanValue enableAutoCuttingUpgrade;
 	public static ForgeConfigSpec.BooleanValue autoCuttingDamagesItems;
 	public static ForgeConfigSpec.BooleanValue enableForgeEnergyUpgrade;
+	public static ForgeConfigSpec.BooleanValue enablePollinatingUpgrade;
 
 	public static ForgeConfigSpec.BooleanValue showChanceInJEI;
 
@@ -41,28 +42,27 @@ public class CommonConfig {
 	public static void register() {
 		enableFortuneUpgrade = COMMON_BUILDER
 				.comment("Enable fortune upgrades?")
-				.worldRestart()
 				.define("enableFortuneUpgrade", true);
 
 		enableEfficiencyUpgrade = COMMON_BUILDER
 				.comment("Enable efficiency upgrades?")
-				.worldRestart()
 				.define("enableEfficiencyUpgrade", true);
 
 		enableHoppingUpgrade = COMMON_BUILDER
 				.comment("Enable hopping upgrade?")
-				.worldRestart()
 				.define("enableHoppingUpgrade", true);
 
 		enableAutoCuttingUpgrade = COMMON_BUILDER
 				.comment("Enable auto cutting upgrades?")
-				.worldRestart()
 				.define("enableAutoCuttingUpgrade", true);
 
 		enableForgeEnergyUpgrade = COMMON_BUILDER
 				.comment("Enable forge energy upgrades?")
-				.worldRestart()
 				.define("enableForgeEnergyUpgrade", true);
+
+		enablePollinatingUpgrade = COMMON_BUILDER
+				.comment("Enable pollinating upgrades?")
+				.define("enablePollinatingUpgrade", true);
 
 		autoCuttingDamagesItems = COMMON_BUILDER
 				.comment("Auto-cutting does damage to the used axe upgrade")
