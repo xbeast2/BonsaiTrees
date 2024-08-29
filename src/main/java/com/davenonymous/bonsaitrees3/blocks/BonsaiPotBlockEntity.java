@@ -34,7 +34,6 @@ import net.minecraftforge.items.wrapper.CombinedInvWrapper;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -293,11 +292,11 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 				continue;
 			}
 
-			if(stack.is(Blocks.BEE_NEST.asItem()) || stack.is(Blocks.BEEHIVE.asItem())) {
+			if(stack.is(Registration.TAG_UPGRADES_POLLINATING)) {
 				hasBeeHive = true;
 			}
 
-			if(stack.is(Blocks.HOPPER.asItem())) {
+			if(stack.is(Registration.TAG_UPGRADES_HOPPING)) {
 				hopping = CommonConfig.enableHoppingUpgrade.get();
 			}
 
@@ -584,13 +583,11 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 	}
 
 	public static boolean isUpgradeItem(ItemStack stack) {
-		// TODO: Create tag to be used for hopping upgrades
-		if(CommonConfig.enableHoppingUpgrade.get() && stack.is(Blocks.HOPPER.asItem())) {
+		if(CommonConfig.enableHoppingUpgrade.get() && stack.is(Registration.TAG_UPGRADES_HOPPING)) {
 			return true;
 		}
 
-		// TODO: Create tag to be used for bee type upgrades
-		if(stack.is(Blocks.BEEHIVE.asItem()) || stack.is(Blocks.BEE_NEST.asItem())) {
+		if(stack.is(Registration.TAG_UPGRADES_POLLINATING)) {
 			return true;
 		}
 

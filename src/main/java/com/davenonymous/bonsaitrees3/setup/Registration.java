@@ -9,16 +9,14 @@ import com.davenonymous.bonsaitrees3.registry.sapling.SaplingSerializer;
 import com.davenonymous.bonsaitrees3.registry.soil.SoilInfo;
 import com.davenonymous.bonsaitrees3.registry.soil.SoilRecipeHelper;
 import com.davenonymous.bonsaitrees3.registry.soil.SoilSerializer;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.item.crafting.RecipeType;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -69,6 +67,9 @@ public class Registration {
 
 	// Convenience function: Take a RegistryObject<Block> and make a corresponding RegistryObject<Item> from it
 	public static final Item.Properties ITEM_PROPERTIES = new Item.Properties();
+
+	public static final TagKey<Item> TAG_UPGRADES_HOPPING  = TagKey.create(Registries.ITEM, new ResourceLocation(MODID, "upgrades/hopping"));
+	public static final TagKey<Item> TAG_UPGRADES_POLLINATING  = TagKey.create(Registries.ITEM, new ResourceLocation(MODID, "upgrades/pollinating"));
 
 	private static <B extends Block> RegistryObject<Item> fromBlock(RegistryObject<B> block) {
 		return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), ITEM_PROPERTIES));
