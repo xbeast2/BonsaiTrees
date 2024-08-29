@@ -56,6 +56,11 @@ the chance to get uncommon drops.
 
 Reduces the time it takes for a bonsai to fully grow. The higher the upgrade level the faster the growth.
 
+### Batteries
+
+Speeds up the growth of the tree by consuming Forge Energy from the upgrade item.
+
+
 ## Configuration
 
 ### Clientside options
@@ -90,6 +95,18 @@ Reduces the time it takes for a bonsai to fully grow. The higher the upgrade lev
     - Can still be inserted into upgrade slots, but effects are disabled.
 
 
+- `enablePollinatingUpgrade (default: true)`
+    - Enable pollinating upgrades?
+    - Required for trees to drop fruit-like items
+    - Can still be inserted into upgrade slots, but effects are disabled.
+
+
+- `enableForgeEnergyUpgrade (default: true)`
+    - Enable forge energy upgrades?
+    - Required for trees to consume energy for growth
+    - Can still be inserted into upgrade slots, but effects are disabled.
+
+
 - `showChanceInJEI (default: true)`
     - Show chance for drops in JEI
     - Not sure why you wouldn't want this.
@@ -101,24 +118,24 @@ Reduces the time it takes for a bonsai to fully grow. The higher the upgrade lev
     - One can consider this to be quite overpowered.
 
 
-- `extraRollsPerFortuneLevel = (default: 1)`
+- `extraRollsPerFortuneLevel (default: 1)`
     - Drops: How many extra rolls per fortune enchantment level?
     - The more rolls the more items can be gained
 
 
-- `extraChancePerFortuneLevel = (default: 0.05)`
+- `extraChancePerFortuneLevel (default: 0.05)`
     - Drops: What is the bonus chance to get a successful drop per fortune enchantment level?
     - The higher the chance the more likely it is that a roll counts towards the result.
     - These sum up, e.g. Fortune V gives a 25% chance boost with the default settings.
 
 
-- `allowBonemeal = (default: true)`
+- `allowBonemeal (default: true)`
     - Allow usage of bone meal on bonsai pots to boost their growth?
     - This is not really efficient - growing a regular sapling with bone meal results in larger amounts of wood than in
       a Bonsai Pot. Unless the Bonsai Pot is stuffed with Fortune upgrades - then it might be worth it.
 
 
-- `bonemealSuccessChance = 0.45`
+- `bonemealSuccessChance (default: 0.45)`
     - How likely is it for bonemeal to succeed in boosting growth?
 
 
@@ -127,9 +144,28 @@ Reduces the time it takes for a bonsai to fully grow. The higher the upgrade lev
     - Lowering this increases load on the server.
 
 
-- `cuttingCooldown = (default: 60)`
+- `cuttingCooldown (default: 60)`
     - How many ticks to wait before trying to cut the tree automatically after failing to do so?
     - Lowering this slightly increases load on the server.
+
+
+- `minimumRequiredTicks (default: 10)`
+    - How many ticks it takes for a tree to grow at minimum. No upgrades etc will make it grow faster than this.
+    - Lowering this increases load on the server, especially if you have a lot of trees.
+
+
+- `requiredTicksModifier (default: 1.0)`
+    - Use this to globally speed up or slow down the growth of all trees.
+    - This is multiplied with all other growth time modifiers.
+
+
+- `maximumExtractedEnergyPerTick (default: 60)`
+    - How much energy can be extracted from the upgrade item per tick?
+    - This is the maximum amount of energy that can be used to grow a tree per tick.
+
+
+- `extraGrowthRatioPerFE (default: 0.005)`
+    - How much faster a tree grows per extracted Forge Energy. (Example: 1.0 + 60fe/t * 0.005 = 1.3x faster)
 
 
 - `autoCuttingDamagesItems (default: false)`
@@ -141,6 +177,7 @@ Reduces the time it takes for a bonsai to fully grow. The higher the upgrade lev
 - `autoCuttingDamageChance (default: 0.075)`
     - How likely is it that the axe upgrade takes damage for each tree it cuts?
     - This is independent of the Unbreaking enchantment
+
 
 ## Tree Compatibility
 
@@ -427,7 +464,7 @@ be
 
 - `src/main/resources/assets/bonsaitrees3/models/tree/XXX/YYY.json` for the model
 - `src/main/resources/data/bonsaitrees3/recipes/sapling/XXX/YYY.json` for sapling recipes
-- `src/main/resources/data/bonsaitrees3/recipes/soil/XXX/YYY.json` for sapling recipes
+- `src/main/resources/data/bonsaitrees3/recipes/soil/XXX/YYY.json` for soil recipes
 
 If you create a datapack or resource pack your paths will be slightly different. Please read the
 [Open Loader](https://www.curseforge.com/minecraft/mc-mods/open-loader) description and the wiki pages it links to
