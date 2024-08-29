@@ -4,10 +4,10 @@ import com.davenonymous.bonsaitrees3.BonsaiTrees3;
 import com.davenonymous.bonsaitrees3.blocks.BonsaiPotContainer;
 import com.davenonymous.bonsaitrees3.client.BonsaiPotScreen;
 import com.davenonymous.bonsaitrees3.config.CommonConfig;
-import com.davenonymous.libnonymous.helper.EnchantmentHelper;
-import com.davenonymous.libnonymous.helper.Translatable;
 import com.davenonymous.bonsaitrees3.registry.sapling.SaplingInfo;
 import com.davenonymous.bonsaitrees3.setup.Registration;
+import com.davenonymous.libnonymous.helper.EnchantmentHelper;
+import com.davenonymous.libnonymous.helper.Translatable;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -19,7 +19,6 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.ToolActions;
 import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -34,7 +33,7 @@ import java.util.stream.Collectors;
 public class BonsaiTreesJEIPlugin implements IModPlugin {
 	public static List<SaplingInfo> saplings;
 	private static final ResourceLocation PLUGIN_ID = new ResourceLocation(BonsaiTrees3.MODID, "jei");
-	
+
     public static final RecipeType<BonsaiUpgradeWrapper> UPGRADES = RecipeType.create(BonsaiTrees3.MODID, "upgrades", BonsaiUpgradeWrapper.class);
     public static final RecipeType<BonsaiRecipeWrapper> BONSAIS = RecipeType.create(BonsaiTrees3.MODID, "bonsais", BonsaiRecipeWrapper.class);
 
@@ -136,16 +135,13 @@ public class BonsaiTreesJEIPlugin implements IModPlugin {
 		}
 
 		if(CommonConfig.enableHoppingUpgrade.get()) {
-			upgradeRecipes.add(new BonsaiUpgradeWrapper(UPGRADE_TEXT_HOPPING, new ItemStack(Blocks.HOPPER)));
+			upgradeRecipes.add(new BonsaiUpgradeWrapper(UPGRADE_TEXT_HOPPING, Registration.TAG_UPGRADES_HOPPING));
 		}
 
 		List<ItemStack> silkTouchItems = new ArrayList<>(EnchantmentHelper.getEnchantmentBooks(Enchantments.SILK_TOUCH));
 		upgradeRecipes.add(new BonsaiUpgradeWrapper(UPGRADE_TEXT_SILKTOUCH, silkTouchItems));
 
-		List<ItemStack> beeItems = new ArrayList<>();
-		beeItems.add(new ItemStack(Blocks.BEEHIVE));
-		beeItems.add(new ItemStack(Blocks.BEE_NEST));
-		upgradeRecipes.add(new BonsaiUpgradeWrapper(UPGRADE_TEXT_BEES, beeItems));
+		upgradeRecipes.add(new BonsaiUpgradeWrapper(UPGRADE_TEXT_BEES, Registration.TAG_UPGRADES_POLLINATING));
 
 		registration.addRecipes(UPGRADES, upgradeRecipes);
 	}

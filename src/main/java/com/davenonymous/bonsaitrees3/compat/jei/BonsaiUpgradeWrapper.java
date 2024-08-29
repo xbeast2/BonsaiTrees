@@ -2,8 +2,6 @@ package com.davenonymous.bonsaitrees3.compat.jei;
 
 import com.davenonymous.libnonymous.base.BaseLanguageProvider;
 import com.davenonymous.libnonymous.helper.Translatable;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -12,13 +10,18 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Style;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.Ingredient;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class BonsaiUpgradeWrapper {
 	List<ItemStack> upgradeItems;
+	List<TagKey<Item>> upgradeItemTags;
+
 	Translatable upgradeDescription;
 
 	public BonsaiUpgradeWrapper(Translatable upgradeDescription, ItemStack... upgradeItem) {
@@ -31,8 +34,21 @@ public class BonsaiUpgradeWrapper {
 		this.upgradeDescription = upgradeDescription;
 	}
 
+	public BonsaiUpgradeWrapper(Translatable upgradeDescription, TagKey<Item>... upgradeTags) {
+		this.upgradeItemTags = Arrays.stream(upgradeTags).toList();
+		this.upgradeDescription = upgradeDescription;
+	}
+
 	public void setRecipe(IRecipeLayoutBuilder builder, IFocusGroup focuses) {
-		builder.addSlot(RecipeIngredientRole.CATALYST, 1, 1).addItemStacks(upgradeItems);
+		var upgradeSlot = builder.addSlot(RecipeIngredientRole.CATALYST, 1, 1);
+		if(upgradeItemTags != null) {
+			for(var item : upgradeItemTags) {
+				upgradeSlot.addIngredients(Ingredient.of(item));
+			}
+			return;
+		}
+
+		upgradeSlot.addItemStacks(upgradeItems);
     }
 
 	public void draw(IRecipeSlotsView view, GuiGraphics guiGraphics, double mouseX, double mouseY) {
