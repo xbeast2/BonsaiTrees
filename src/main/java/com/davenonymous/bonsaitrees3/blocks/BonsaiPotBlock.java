@@ -1,5 +1,6 @@
 package com.davenonymous.bonsaitrees3.blocks;
 
+import com.davenonymous.bonsaitrees3.registry.soil.SoilInfo;
 import com.davenonymous.libnonymous.compat.top.ITopInfoProvider;
 import com.davenonymous.bonsaitrees3.config.CommonConfig;
 import com.davenonymous.libnonymous.base.BaseBlock;
@@ -9,6 +10,7 @@ import com.davenonymous.bonsaitrees3.setup.Registration;
 import mcjty.theoneprobe.api.IProbeHitData;
 import mcjty.theoneprobe.api.IProbeInfo;
 import mcjty.theoneprobe.api.ProbeMode;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.Material;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -235,13 +237,14 @@ public class BonsaiPotBlock extends BaseBlock implements BonemealableBlock, ITop
 
 		if(pot.hasSoil()) {
 			var soilInfo = pot.getSoilInfo();
-			if(soilInfo.isFluid) {
+			if(soilInfo.soilType == SoilInfo.SoilType.FLUID) {
 				Item bucketItem = soilInfo.fluidState.getType().getBucket();
 				ItemStack bucketStack = new ItemStack(bucketItem);
 				iProbeInfo.horizontal().item(bucketStack).itemLabel(bucketStack);
 			} else {
-				var soilStack = new ItemStack(pot.getSoilBlock().getBlock());
-				iProbeInfo.horizontal().item(soilStack).itemLabel(soilStack);
+				ItemStack[] soilItems = soilInfo.ingredient.getItems();
+				var itemToShow = soilItems[(int)(Minecraft.getInstance().level.getGameTime() / 20 % soilItems.length)];
+				iProbeInfo.horizontal().item(itemToShow).itemLabel(itemToShow);
 			}
 		}
 

@@ -2,6 +2,8 @@ package com.davenonymous.bonsaitrees3.client;
 
 import com.davenonymous.bonsaitrees3.blocks.BonsaiPotBlockEntity;
 import com.davenonymous.libnonymous.render.QuadBaker;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraftforge.client.textures.TextureAtlasSpriteLoaderManager;
 import org.joml.Matrix4f;
 import com.mojang.math.Transformation;
 import net.minecraft.client.Minecraft;
@@ -42,6 +44,7 @@ public class BonsaiPotBakedModel implements IDynamicBakedModel {
 	private final ItemTransforms itemTransforms;
 	private final Map<BlockState, List<BakedQuad>> quadCache = new HashMap<>();
 	private final Map<FluidState, List<BakedQuad>> fluidQuadCache = new HashMap<>();
+	private final Map<ResourceLocation, List<BakedQuad>> textureCache = new HashMap<>();
 	private final BakedModel potModel;
 
 	public BonsaiPotBakedModel(ModelState modelState, Function<Material, TextureAtlasSprite> spriteGetter, ItemOverrides overrides, ItemTransforms itemTransforms, BakedModel potModel) {
@@ -61,12 +64,29 @@ public class BonsaiPotBakedModel implements IDynamicBakedModel {
 
 		BlockState soilBlock = extraData.get(BonsaiPotBlockEntity.SOIL_BLOCK);
 		FluidState fluidBlock = extraData.get(BonsaiPotBlockEntity.FLUID_BLOCK);
+		ResourceLocation soilTexture = extraData.get(BonsaiPotBlockEntity.SOIL_TEXTURE);
 
 		boolean hasBlock = soilBlock != null && !soilBlock.isAir();
 		boolean hasFluid = fluidBlock != null && !fluidBlock.isEmpty();
+		boolean hasTexture = soilTexture != null;
 
-		if(!hasFluid && !hasBlock) {
+		if(!hasFluid && !hasBlock && !hasTexture) {
 			return this.potModel.getQuads(state, side, rand, extraData, renderType);
+		}
+
+		if(hasTexture) {
+			if(!textureCache.containsKey(soilTexture)) {
+				List<BakedQuad> potQuads = new ArrayList<>(this.potModel.getQuads(state, side, rand, extraData, renderType));
+
+				var sprite = Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(soilTexture);
+				var height = 0.125f;
+				var quad = QuadBaker.createQuad(new Vec3(0.1f, height, 0.1f), new Vec3(0.1f, height, 0.9f), new Vec3(0.9f, height, 0.9f), new Vec3(0.9f, height, 0.1f), Transformation.identity(), sprite, 1.0f, 1.0f, 1.0f, 1.0f);
+
+				potQuads.add(quad);
+				textureCache.put(soilTexture, potQuads);
+			}
+
+			return textureCache.get(soilTexture);
 		}
 
 		if(hasBlock) {

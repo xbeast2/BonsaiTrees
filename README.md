@@ -211,6 +211,7 @@ Create the soil recipe first. You can skip this if you don't have custom soil re
   "display": {
     "block": "minecraft:grass_block"            // The block that's being used to render the soil
     // "fluid": "minecraft:lava"                // You can also use fluids here!
+    // "texture": "bonsaitrees3:block/hopping_bonsaipot"  // Or a custom texture.
   }
 }
 ```

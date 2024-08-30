@@ -14,13 +14,21 @@ import java.util.Objects;
 import java.util.Set;
 
 public class SoilInfo extends RecipeData {
+
+	public enum SoilType {
+		BLOCK,
+		FLUID,
+		TEXTURE
+	}
+
 	private final ResourceLocation id;
 	public Ingredient ingredient;
 	public BlockState blockState;
 	public FluidState fluidState;
+	public ResourceLocation soilTexture;
 	public float tickModifier;
 	public Set<String> tags;
-	public boolean isFluid;
+	public SoilType soilType;
 
 	public SoilInfo(ResourceLocation id, Ingredient ingredient, BlockState blockState, float tickModifier) {
 		this.id = id;
@@ -28,7 +36,7 @@ public class SoilInfo extends RecipeData {
 		this.blockState = blockState;
 		this.tickModifier = tickModifier;
 		this.tags = new HashSet<>();
-		this.isFluid = false;
+		this.soilType = SoilType.BLOCK;
 	}
 
 	public SoilInfo(ResourceLocation id, Ingredient ingredient, FluidState fluidState, float tickModifier) {
@@ -37,7 +45,16 @@ public class SoilInfo extends RecipeData {
 		this.fluidState = fluidState;
 		this.tickModifier = tickModifier;
 		this.tags = new HashSet<>();
-		this.isFluid = true;
+		this.soilType = SoilType.FLUID;
+	}
+
+	public SoilInfo(ResourceLocation id, Ingredient ingredient, ResourceLocation soilTexture, float tickModifier) {
+		this.id = id;
+		this.ingredient = ingredient;
+		this.soilTexture = soilTexture;
+		this.tickModifier = tickModifier;
+		this.tags = new HashSet<>();
+		this.soilType = SoilType.TEXTURE;
 	}
 
 	public void addTag(String tag) {
@@ -69,11 +86,11 @@ public class SoilInfo extends RecipeData {
 
 	@Override
 	public boolean equals(Object o) {
-		return o instanceof SoilInfo other && other.isFluid == this.isFluid && other.id.equals(this.id);
+		return o instanceof SoilInfo other && other.soilType == this.soilType && other.id.equals(this.id);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, isFluid);
+		return Objects.hash(id, soilType);
 	}
 }

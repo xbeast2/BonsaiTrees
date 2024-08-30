@@ -1,6 +1,7 @@
 package com.davenonymous.bonsaitrees3.client;
 
 import com.davenonymous.bonsaitrees3.blocks.BonsaiPotBlockEntity;
+import com.davenonymous.bonsaitrees3.registry.soil.SoilInfo;
 import com.davenonymous.libnonymous.registration.CustomBlockStateProperties;
 import com.davenonymous.bonsaitrees3.setup.NbtConsts;
 import com.davenonymous.bonsaitrees3.setup.Registration;
@@ -28,7 +29,7 @@ public class PotColorizer {
 				int color = state.getValue(CustomBlockStateProperties.COLOR);
 				return DyeColor.byId(color).getFireworkColor();
 			} else if(blockAccess != null && blockAccess.getBlockEntity(pos) instanceof BonsaiPotBlockEntity potBlock) {
-				if(potBlock.hasSoil() && !potBlock.getSoilInfo().isFluid) {
+				if(potBlock.hasSoil() && potBlock.getSoilInfo().soilType == SoilInfo.SoilType.BLOCK) {
 					return Minecraft.getInstance().getBlockColors().getColor(potBlock.getSoilBlock(), blockAccess, pos, tintIndex);
 				}
 

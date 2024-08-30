@@ -13,6 +13,7 @@ import com.davenonymous.libnonymous.helper.SpawnHelper;
 import com.davenonymous.libnonymous.serialization.Store;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.Enchantments;
@@ -88,6 +89,7 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 
 	public static final ModelProperty<BlockState> SOIL_BLOCK = new ModelProperty<>();
 	public static final ModelProperty<FluidState> FLUID_BLOCK = new ModelProperty<>();
+	public static final ModelProperty<ResourceLocation> SOIL_TEXTURE = new ModelProperty<>();
 
 	public BonsaiPotBlockEntity(BlockPos pos, BlockState state) {
 		super(Registration.BONSAI_POT_BLOCKENTITY.get(), pos, state);
@@ -173,7 +175,10 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 	@Nonnull
 	@Override
 	public ModelData getModelData() {
-		return ModelData.builder().with(SOIL_BLOCK, getSoilBlock()).with(FLUID_BLOCK, getFluidBlock())
+		return ModelData.builder()
+				.with(SOIL_BLOCK, getSoilBlock())
+				.with(FLUID_BLOCK, getFluidBlock())
+				.with(SOIL_TEXTURE, getSoilTexture())
 				.build();
 	}
 
@@ -225,6 +230,14 @@ public class BonsaiPotBlockEntity extends BaseBlockEntity<BonsaiPotBlockEntity> 
 		}
 
 		return this.soilInfo.blockState;
+	}
+
+	public ResourceLocation getSoilTexture() {
+		if(this.soilInfo == null) {
+			return null;
+		}
+
+		return this.soilInfo.soilTexture;
 	}
 
 	public SoilInfo getSoilInfo() {

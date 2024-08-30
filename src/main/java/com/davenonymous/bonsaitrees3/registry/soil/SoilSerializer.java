@@ -33,13 +33,16 @@ public class SoilSerializer implements RecipeSerializer<SoilInfo> {
 			tickModifier = json.get("tickModifier").getAsFloat();
 		}
 
-		boolean isFluid = json.getAsJsonObject("display").has("fluid");
+		JsonObject display = json.getAsJsonObject("display");
 		SoilInfo result;
-		if(isFluid) {
-			FluidState state = FluidStateSerializationHelper.deserializeFluidState(json.getAsJsonObject("display"));
+		if(display.has("fluid")) {
+			FluidState state = FluidStateSerializationHelper.deserializeFluidState(display);
 			result = new SoilInfo(recipeId, soil, state, tickModifier);
+		} else if (display.has("texture")) {
+			ResourceLocation texture = new ResourceLocation(display.get("texture").getAsString());
+			result = new SoilInfo(recipeId, soil, texture, tickModifier);
 		} else {
-			BlockState state = BlockStateSerializationHelper.deserializeBlockState(json.getAsJsonObject("display"));
+			BlockState state = BlockStateSerializationHelper.deserializeBlockState(display);
 			result = new SoilInfo(recipeId, soil, state, tickModifier);
 		}
 
@@ -66,17 +69,15 @@ public class SoilSerializer implements RecipeSerializer<SoilInfo> {
 	@Nullable
 	@Override
 	public SoilInfo fromNetwork(ResourceLocation recipeId, FriendlyByteBuf buffer) {
-		final boolean isFluid = buffer.readBoolean();
+		final SoilInfo.SoilType soilType = buffer.readEnum(SoilInfo.SoilType.class);
 		final Ingredient ingredient = Ingredient.fromNetwork(buffer);
 		final float tickModifier = buffer.readFloat();
 
 		SoilInfo result;
-		if(isFluid) {
-			final FluidState fluidState = FluidStateSerializationHelper.deserializeFluidState(buffer);
-			result = new SoilInfo(recipeId, ingredient, fluidState, tickModifier);
-		} else {
-			final BlockState blockState = BlockStateSerializationHelper.deserializeBlockState(buffer);
-			result = new SoilInfo(recipeId, ingredient, blockState, tickModifier);
+		switch(soilType) {
+			case FLUID -> result = new SoilInfo(recipeId, ingredient, FluidStateSerializationHelper.deserializeFluidState(buffer), tickModifier);
+			case TEXTURE -> result = new SoilInfo(recipeId, ingredient, buffer.readResourceLocation(), tickModifier);
+			default -> result = new SoilInfo(recipeId, ingredient, BlockStateSerializationHelper.deserializeBlockState(buffer), tickModifier);
 		}
 
 		final int tagCount = buffer.readInt();
@@ -89,19 +90,18 @@ public class SoilSerializer implements RecipeSerializer<SoilInfo> {
 
 	@Override
 	public void toNetwork(FriendlyByteBuf buffer, SoilInfo soil) {
-		buffer.writeBoolean(soil.isFluid);
+		buffer.writeEnum(soil.soilType);
 		soil.ingredient.toNetwork(buffer);
 		buffer.writeFloat(soil.tickModifier);
-		if(soil.isFluid) {
-			FluidStateSerializationHelper.serializeFluidState(buffer, soil.fluidState);
-		} else {
-			BlockStateSerializationHelper.serializeBlockState(buffer, soil.blockState);
+		switch(soil.soilType) {
+			case FLUID -> FluidStateSerializationHelper.serializeFluidState(buffer, soil.fluidState);
+			case TEXTURE -> buffer.writeResourceLocation(soil.soilTexture);
+			default -> BlockStateSerializationHelper.serializeBlockState(buffer, soil.blockState);
 		}
 
 		buffer.writeInt(soil.tags.size());
 		for(String tag : soil.tags) {
 			buffer.writeUtf(tag);
 		}
-
 	}
 }
