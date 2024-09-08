@@ -1,0 +1,48 @@
+{
+  "type": "bonsaitrees3:sapling/occultism/otherworld_tree",
+  "version": 3,
+  "ref": {
+	"a": {"block":"occultism:otherworld_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+	"b": {"block":"occultism:otherworld_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+	"c": {"block":"occultism:otherworld_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+	"d": {"block":"occultism:otherworld_log","properties":{"axis":"y"}},
+	"e": {"block":"occultism:otherworld_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+	[
+	  "     ",
+	  "     ",
+	  " cace",
+	  "ecace",
+	  "     "
+	],
+	[
+	  "  a  ",
+	  "  b  ",
+	  "cabac",
+	  "cabac",
+	  "     "
+	],
+	[
+	  " aba ",
+	  " bdb ",
+	  "abdba",
+	  "abdba",
+	  "  d  "
+	],
+	[
+	  "  a  ",
+	  "  b  ",
+	  "cabac",
+	  "cabac",
+	  "     "
+	],
+	[
+	  "     ",
+	  "     ",
+	  " cace",
+	  "ecac ",
+	  "     "
+	]
+  ]
+}

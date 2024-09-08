@@ -1,0 +1,29 @@
+{
+  "type": "bonsaitrees3:sapling/sushigocrafting/avocado",
+  "version": 3,
+  "ref": {
+	"a": {"block":"sushigocrafting:avocado_leaves","properties":{"distance":"1","persistent":"false","stage":"2"}},
+	"b": {"block":"sushigocrafting:avocado_leaves","properties":{"distance":"1","persistent":"false","stage":"1"}},
+	"c": {"block":"sushigocrafting:avocado_leaves","properties":{"distance":"2","persistent":"false","stage":"0"}},
+	"d": {"block":"sushigocrafting:avocado_log","properties":{"axis":"y"}},
+	"e": {"block":"sushigocrafting:avocado_leaves","properties":{"distance":"2","persistent":"false","stage":"2"}},
+	"f": {"block":"sushigocrafting:avocado_leaves","properties":{"distance":"1","persistent":"false","stage":"0"}}
+  },
+  "shape": [
+	[
+	  " e ",
+	  " bc",
+	  "   "
+	],
+	[
+	  "cbc",
+	  "adf",
+	  " d "
+	],
+	[
+	  " c ",
+	  " ac",
+	  "   "
+	]
+  ]
+}

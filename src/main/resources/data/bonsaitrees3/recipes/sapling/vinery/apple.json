@@ -1,0 +1,49 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "vinery" }],
+  "sapling": {
+	"item": "vinery:apple_tree_sapling"
+  },
+  "drops": [
+	{
+	  "rolls": 1,
+	  "chance": 0.05,
+	  "result": {
+		"item": "vinery:apple_tree_sapling"
+	  }
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.75,
+	  "result": {
+		"item": "vinery:apple_log"
+	  }
+	},
+	{
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:stick"
+	  },
+	  "rolls": 3
+	},
+	{
+	  "rolls": 2,
+	  "chance": 0.2,
+	  "result": {
+		"item": "vinery:apple_leaves"
+	  },
+	  "requiresSilkTouch": true
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:apple"
+	  },
+	  "requiresBees": true
+	}
+  ],
+  "compatibleSoilTags": [
+	"dirt", "grass"
+  ]
+}

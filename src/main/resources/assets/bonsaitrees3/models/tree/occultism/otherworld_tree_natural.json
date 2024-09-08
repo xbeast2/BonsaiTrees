@@ -1,0 +1,53 @@
+{
+  "type": "bonsaitrees3:sapling/occultism/otherworld_tree_natural",
+  "version": 3,
+  "ref": {
+	"a": {"block":"occultism:otherworld_leaves_natural","properties":{"distance":"2","persistent":"false","uncovered":"false","waterlogged":"false"}},
+	"b": {"block":"occultism:otherworld_log_natural","properties":{"axis":"y","uncovered":"false"}},
+	"c": {"block":"occultism:otherworld_leaves_natural","properties":{"distance":"3","persistent":"false","uncovered":"false","waterlogged":"false"}},
+	"d": {"block":"occultism:otherworld_leaves_natural","properties":{"distance":"1","persistent":"false","uncovered":"false","waterlogged":"false"}},
+	"e": {"block":"occultism:otherworld_leaves_natural","properties":{"distance":"4","persistent":"false","uncovered":"false","waterlogged":"false"}}
+  },
+  "shape": [
+	[
+	  "     ",
+	  "     ",
+	  "ecac ",
+	  " cace",
+	  "     ",
+	  "     "
+	],
+	[
+	  "  a  ",
+	  "  d  ",
+	  "cadac",
+	  "cadac",
+	  "     ",
+	  "     "
+	],
+	[
+	  " ada ",
+	  " dbd ",
+	  "adbda",
+	  "adbda",
+	  "  b  ",
+	  "  b  "
+	],
+	[
+	  "  a  ",
+	  " ada ",
+	  "cadac",
+	  "cadac",
+	  "     ",
+	  "     "
+	],
+	[
+	  "     ",
+	  "     ",
+	  "ecac ",
+	  "ecac ",
+	  "     ",
+	  "     "
+	]
+  ]
+}

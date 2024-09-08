@@ -1,0 +1,62 @@
+{
+  "type": "bonsaitrees3:sapling/pizzacraft/olive",
+  "version": 3,
+  "ref": {
+	"a": {"block":"pizzacraft:fruit_olive_leaves","properties":{"age":"3","distance":"4","persistent":"false","waterlogged":"false"}},
+	"b": {"block":"pizzacraft:olive_log","properties":{"axis":"y"}},
+	"c": {"block":"pizzacraft:olive_leaves","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+	"d": {"block":"pizzacraft:olive_leaves","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+	"e": {"block":"pizzacraft:fruit_olive_leaves","properties":{"age":"3","distance":"1","persistent":"false","waterlogged":"false"}},
+	"f": {"block":"pizzacraft:olive_leaves","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+	"g": {"block":"pizzacraft:olive_leaves","properties":{"distance":"1","persistent":"false","waterlogged":"false"}},
+	"h": {"block":"pizzacraft:fruit_olive_leaves","properties":{"age":"3","distance":"3","persistent":"false","waterlogged":"false"}},
+	"i": {"block":"pizzacraft:fruit_olive_leaves","properties":{"age":"3","distance":"2","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+	[
+	  "     ",
+	  "     ",
+	  "cdfdc",
+	  "cdih ",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  "  f  ",
+	  "  gf ",
+	  "dfefd",
+	  "dfgfd",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  " fef ",
+	  " gbg ",
+	  "fgbgf",
+	  "igbef",
+	  "  b  ",
+	  "  b  ",
+	  "  b  "
+	],
+	[
+	  "  f  ",
+	  "  gi ",
+	  "digfd",
+	  "dfgfd",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  "     ",
+	  "     ",
+	  " dfda",
+	  "cdfd ",
+	  "     ",
+	  "     ",
+	  "     "
+	]
+  ]
+}

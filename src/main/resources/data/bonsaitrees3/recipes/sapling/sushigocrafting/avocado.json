@@ -1,0 +1,57 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "sushigocrafting" }],
+  "sapling": {
+	"item": "sushigocrafting:avocado_sapling"
+  },
+  "drops": [
+	{
+	  "rolls": 1,
+	  "chance": 0.05,
+	  "result": {
+		"item": "sushigocrafting:avocado_sapling"
+	  }
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.75,
+	  "result": {
+		"item": "sushigocrafting:avocado_log"
+	  }
+	},
+	{
+	  "chance": 0.2,
+	  "result": {
+		"item": "minecraft:stick"
+	  },
+	  "rolls": 3
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.15,
+	  "result": {
+		"item": "sushigocrafting:avocado_leaves"
+	  },
+	  "requiresSilkTouch": true
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.10,
+	  "result": {
+		"item": "sushigocrafting:avocado_leaves_logged"
+	  },
+	  "requiresSilkTouch": true
+	},
+	{
+	  "rolls": 1,
+	  "chance": 0.1,
+	  "result": {
+		"item": "sushigocrafting:avocado"
+	  },
+	  "requiresBees": true
+	}
+  ],
+  "compatibleSoilTags": [
+	"dirt", "grass", "mud"
+  ]
+}
