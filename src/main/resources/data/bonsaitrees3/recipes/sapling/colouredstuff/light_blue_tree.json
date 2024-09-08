@@ -1,0 +1,42 @@
+{
+  "type": "bonsaitrees3:sapling",
+  "conditions": [{ "type": "forge:mod_loaded", "modid": "colouredstuff" }],
+  "sapling": {
+    "item": "colouredstuff:sapling_light_blue"
+  },
+  "drops": [
+    {
+      "rolls": 1,
+      "chance": 0.05,
+      "result": {
+        "item": "colouredstuff:sapling_light_blue"
+      }
+    },
+    {
+      "rolls": 1,
+      "chance": 0.75,
+      "result": {
+        "item": "colouredstuff:log_light_blue"
+      }
+    },
+    {
+      "rolls": 3,
+      "chance": 0.2,
+      "result": {
+        "item": "minecraft:stick"
+      }
+    },
+    {
+      "rolls": 2,
+      "chance": 0.2,
+      "result": {
+        "item": "colouredstuff:leaves_light_blue"
+      },
+      "requiresSilkTouch": true
+    }
+  ],
+
+  "compatibleSoilTags": [
+    "dirt_light_blue"
+  ]
+}

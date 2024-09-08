@@ -1,0 +1,59 @@
+{
+  "type": "bonsaitrees3:sapling/colouredstuff/light_gray_tree",
+  "version": 3,
+  "ref": {
+	"a": {"block":"colouredstuff:leaves_light_gray","properties":{"distance":"4","persistent":"false","waterlogged":"false"}},
+	"b": {"block":"colouredstuff:leaves_light_gray","properties":{"distance":"5","persistent":"false","waterlogged":"false"}},
+	"c": {"block":"colouredstuff:log_light_gray","properties":{"axis":"y"}},
+	"d": {"block":"colouredstuff:leaves_light_gray","properties":{"distance":"2","persistent":"false","waterlogged":"false"}},
+	"e": {"block":"colouredstuff:leaves_light_gray","properties":{"distance":"3","persistent":"false","waterlogged":"false"}},
+	"f": {"block":"colouredstuff:leaves_light_gray","properties":{"distance":"1","persistent":"false","waterlogged":"false"}}
+  },
+  "shape": [
+	[
+	  "     ",
+	  "     ",
+	  "aaea ",
+	  " aea ",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  "  d  ",
+	  "  fd ",
+	  "eedea",
+	  "aedea",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  " dfd ",
+	  " fcf ",
+	  "ddcde",
+	  "edcde",
+	  "  c  ",
+	  "  c  ",
+	  "  c  "
+	],
+	[
+	  "  d  ",
+	  "  fd ",
+	  "eedea",
+	  "addea",
+	  "     ",
+	  "     ",
+	  "     "
+	],
+	[
+	  "     ",
+	  "     ",
+	  " aeab",
+	  "bedeb",
+	  "     ",
+	  "     ",
+	  "     "
+	]
+  ]
+}

@@ -1,0 +1,18 @@
+{
+    "type": "bonsaitrees3:soil",
+    "conditions": [{
+        "type": "forge:mod_loaded",
+        "modid": "colouredstuff" }
+    ],
+    "tickModifier": 1.0,
+    "soil": {
+        "item": "colouredstuff:dirt_red"
+    },
+    "compatibleSoilTags": [
+        "dirt",
+        "dirt_red"
+    ],
+    "display": {
+        "block": "colouredstuff:dirt_red"
+    }
+}
