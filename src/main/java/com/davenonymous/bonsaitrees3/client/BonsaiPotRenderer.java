@@ -62,10 +62,10 @@ public class BonsaiPotRenderer implements BlockEntityRenderer<BonsaiPotBlockEnti
 		float progress = (float) pPotBlock.getProgress(pPartialTick);
 		poseStack.scale(progress, progress, progress);
 
-		var rendertype = RenderType.solid();
+		var rendertype = RenderType.cutout();
 		var mc = Minecraft.getInstance();
-		if(mc.options.graphicsMode().get().getId() >= GraphicsStatus.FANCY.getId()) {
-			rendertype = RenderType.cutout();
+		if(mc.options.graphicsMode().get().getId() == GraphicsStatus.FAST.getId()) {
+			rendertype = RenderType.solid();
 		}
 
 		if(renderItemInstead) {
